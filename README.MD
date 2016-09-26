@@ -2,6 +2,6 @@
 
 Thomas - Navigable mountain Terrain
 
-Harriot -
+Harriet - Procedural Enemy Generator
 
 Maddie - 
