@@ -269,3 +269,14 @@ __pycache__/
 
 ### VisualStudio Patch ###
 build/
+
+
+
+# Force the entire SDL distribution to be added to the repository
+!**/SDL2*/**
+
+# Force the entire glm distribution to be added to the repository
+!**/glm*/**
+
+# Force the entire glew distribution to be added to the repository
+!**/glew*/**
