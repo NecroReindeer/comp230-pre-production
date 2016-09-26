@@ -3,29 +3,30 @@
 
 class Game
 {
-public:
-	Game();
-	~Game();
+public: 
+  static Game* getInstance();
 
-	static Game* instance;
+  static const int WINDOW_WIDTH = 640;
+  static const int WINDOW_HEIGHT = 480;
 
-	static const int WINDOW_WIDTH = 640;
-	static const int WINDOW_HEIGHT = 480;
-
-	void run();
+  void run();
 
 private:
-	SDL_Window* window;
-	SDL_GLContext context;
+  Game();
+  ~Game();
+  static Game* instance;
 
-	bool running;
+  SDL_Window* window;
+  SDL_GLContext context;
 
-	void initialiseSDL();
-	void initialiseOpenGL();
-	void initialiseGlew();
+  bool running;
 
-	void update();
-	void handleEvents();
-	void render();
+  void initialiseSDL();
+  void initialiseOpenGL();
+  void initialiseGlew();
+
+  void update();
+  void handleEvents();
+  void render();
 };
 

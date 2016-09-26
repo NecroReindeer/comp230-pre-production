@@ -4,7 +4,7 @@
 
 InitialisationError::InitialisationError(const std::string& message, const char* error)
 {
-	// Append error message to the message passed in
+  // Append error message to the message passed in
   errorMessage = message + "\n" + error;
 }
 

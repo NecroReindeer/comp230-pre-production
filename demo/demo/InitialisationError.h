@@ -9,25 +9,25 @@ It inherits from the std::exception class.
 class InitialisationError : std::exception
 {
 public:
-	//! Constructor for the error.
-	/*!
-	This is the constructor for the class. The error message
-	should be passed in when the class is constructed.
-	*/
-	InitialisationError(const std::string& message, const char* error);
+  //! Constructor for the error.
+  /*!
+  This is the constructor for the class. The error message
+  should be passed in when the class is constructed.
+  */
+  InitialisationError(const std::string& message, const char* error);
 
-	//! Return a pointer to the stored error message.
-	/*!
-	This returns the stored error message.
-	*/
-	const char* what() { return errorMessage.c_str(); }
+  //! Return a pointer to the stored error message.
+  /*!
+  This returns the stored error message.
+  */
+  const char* what() { return errorMessage.c_str(); }
 
 private:
-	//! Private member to store error message.
-	/*!
-	This variable stores the error message that will be
-	displayed as a std::string.
-	*/
-	std::string errorMessage;
+  //! Private member to store error message.
+  /*!
+  This variable stores the error message that will be
+  displayed as a std::string.
+  */
+  std::string errorMessage;
 };
 
