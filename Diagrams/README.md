@@ -25,3 +25,6 @@ The falcon will:
 ##Planning
 ###Class diagram:
 ![Inprogress class diagram](https://raw.githubusercontent.com/NecroReindeer/comp230-pre-production/Companion-AI/Diagrams/COMP230%20-%20Falcon%20AI.png)
+
+###Flowchart:  
+![First draft flowchart](https://github.com/NecroReindeer/comp230-pre-production/blob/Companion-AI/Diagrams/COMP230%20-%20flowchart.png?raw=true)
