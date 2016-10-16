@@ -1,6 +1,7 @@
 #pragma once
 class Falcon
 {
+	//! Main class for the Falcon
 public:
 	//! Constructor
 	Falcon();
@@ -14,7 +15,15 @@ public:
 	//! returns int of value z
 	int getZ() { return z; }
 
-	//! updates falcons location and state
+
+	//! sets value of x
+	int setX(int newX) { return x = newX; }
+	//! sets value of y
+	int setY(int newY) { return y = newY; }
+	//! sets value of z
+	int setZ(int newZ) { return z = newZ; }
+
+	//! updates falcons location and branch state
 	void update();
 
 
