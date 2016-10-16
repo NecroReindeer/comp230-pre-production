@@ -158,6 +158,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="demo.h" />
+    <ClInclude Include="Falcon.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="InitialisationError.h" />
     <ClInclude Include="Resource.h" />
@@ -166,6 +167,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="demo.cpp" />
+    <ClCompile Include="Falcon.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="InitialisationError.cpp" />
     <ClCompile Include="stdafx.cpp">
