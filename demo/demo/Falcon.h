@@ -26,6 +26,8 @@ public:
 	//! updates falcons location and branch state
 	void update();
 
+	// currentBranch/Node ?
+
 
 private:
 	//! int for the falcon's current location

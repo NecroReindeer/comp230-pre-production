@@ -4,7 +4,9 @@ class CompositeNode :
 	public Node
 {
 public:
+	//! Constructor
 	CompositeNode();
+	//! Destructor
 	~CompositeNode();
 };
 
