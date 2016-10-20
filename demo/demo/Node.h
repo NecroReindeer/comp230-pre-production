@@ -6,7 +6,8 @@ public:
 	Node();
 	~Node();
 
-	enum class NodeState { Success, Failure, Running };
+	enum class NodeStates { Success, Failure, Running };
+	NodeStates nodeState;
 	
 	virtual void update() = 0;
 };
