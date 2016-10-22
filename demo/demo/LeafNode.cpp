@@ -10,3 +10,11 @@ LeafNode::LeafNode()
 LeafNode::~LeafNode()
 {
 }
+
+bool LeafNode::checkHealth(int currentHealth, int healthThreshold)
+{
+	if (currentHealth <= healthThreshold)
+		return true;
+	else
+		return false;
+}
