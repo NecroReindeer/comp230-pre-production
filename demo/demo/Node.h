@@ -1,4 +1,6 @@
 #pragma once
+
+class Falcon;
 //! Abstract node that other node types will inherit from
 class Node
 {
@@ -13,6 +15,6 @@ public:
 	NodeStates nodeState;
 	
 	//! Virtual update function
-	virtual void update() = 0;
+	virtual Node::NodeStates update();
 };
 

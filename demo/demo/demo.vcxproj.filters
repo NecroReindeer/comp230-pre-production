@@ -19,6 +19,9 @@
     <Filter Include="Source Files\Nodes">
       <UniqueIdentifier>{c3c15314-b058-4edb-a950-c17309525a9b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Nodes\Abstract Nodes">
+      <UniqueIdentifier>{6eede321-d10b-404a-b929-08381e917b61}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -46,16 +49,25 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Node.h">
-      <Filter>Header Files\Nodes</Filter>
+      <Filter>Header Files\Nodes\Abstract Nodes</Filter>
     </ClInclude>
     <ClInclude Include="CompositeNode.h">
-      <Filter>Header Files\Nodes</Filter>
+      <Filter>Header Files\Nodes\Abstract Nodes</Filter>
     </ClInclude>
     <ClInclude Include="DecoratorNode.h">
-      <Filter>Header Files\Nodes</Filter>
+      <Filter>Header Files\Nodes\Abstract Nodes</Filter>
     </ClInclude>
     <ClInclude Include="LeafNode.h">
-      <Filter>Header Files\Nodes</Filter>
+      <Filter>Header Files\Nodes\Abstract Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="IdleBranch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BranchManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DeadBranch.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +97,15 @@
     </ClCompile>
     <ClCompile Include="LeafNode.cpp">
       <Filter>Source Files\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="IdleBranch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BranchManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeadBranch.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
