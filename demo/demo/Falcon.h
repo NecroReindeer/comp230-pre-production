@@ -14,6 +14,8 @@ public:
 	int getY() { return y; }
 	//! returns int of value z
 	int getZ() { return z; }
+	//! returns int of value health
+	int getHealth() { return health; }
 
 
 	//! sets value of x
@@ -22,6 +24,8 @@ public:
 	int setY(int newY) { return y = newY; }
 	//! sets value of z
 	int setZ(int newZ) { return z = newZ; }
+	//! sets value of health
+	int setHealth(int newHealth) { return health = newHealth; }
 
 	//! updates falcons location and branch state
 	void update();
@@ -32,5 +36,6 @@ public:
 private:
 	//! int for the falcon's current location
 	int x, y, z;
+	int health = 100;
 };
 
