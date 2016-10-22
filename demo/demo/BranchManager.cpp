@@ -10,3 +10,8 @@ BranchManager::BranchManager()
 BranchManager::~BranchManager()
 {
 }
+
+void BranchManager::update()
+{
+	currentNode.update();
+}

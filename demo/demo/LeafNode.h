@@ -11,7 +11,7 @@ public:
 	//! Destructor
 	~LeafNode();
 
-	void update(Falcon falcon);
+	Node::NodeStates update();
 
 	bool checkHealth(int currentHealth, int healthThreshold);
 };

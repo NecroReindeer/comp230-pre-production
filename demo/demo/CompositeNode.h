@@ -16,5 +16,7 @@ public:
 	//! Selector
 	// Only one needs to be chosen
 	void selector();
+
+	Node::NodeStates update();
 };
 

@@ -60,9 +60,6 @@
     <ClInclude Include="LeafNode.h">
       <Filter>Header Files\Nodes\Abstract Nodes</Filter>
     </ClInclude>
-    <ClInclude Include="IdleBranch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="BranchManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -97,9 +94,6 @@
     </ClCompile>
     <ClCompile Include="LeafNode.cpp">
       <Filter>Source Files\Nodes</Filter>
-    </ClCompile>
-    <ClCompile Include="IdleBranch.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="BranchManager.cpp">
       <Filter>Source Files</Filter>

@@ -15,6 +15,6 @@ public:
 	NodeStates nodeState;
 	
 	//! Virtual update function
-	virtual Node::NodeStates update();
+	virtual Node::NodeStates update() =0;
 };
 

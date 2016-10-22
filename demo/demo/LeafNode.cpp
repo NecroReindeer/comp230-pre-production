@@ -18,3 +18,8 @@ bool LeafNode::checkHealth(int currentHealth, int healthThreshold)
 	else
 		return false;
 }
+
+Node::NodeStates LeafNode::update()
+{
+	return Node::NodeStates::Running;
+}
