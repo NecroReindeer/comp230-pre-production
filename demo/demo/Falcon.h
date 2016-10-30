@@ -1,5 +1,5 @@
 #pragma once
-class Falcon
+class Falcon : public Falcon
 {
 	//! Main class for the Falcon
 public:

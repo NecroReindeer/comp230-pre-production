@@ -157,6 +157,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animal.h" />
     <ClInclude Include="BranchManager.h" />
     <ClInclude Include="CompositeNode.h" />
     <ClInclude Include="DeadBranch.h" />
@@ -172,6 +173,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Animal.cpp" />
     <ClCompile Include="BranchManager.cpp" />
     <ClCompile Include="CompositeNode.cpp" />
     <ClCompile Include="DeadBranch.cpp" />
