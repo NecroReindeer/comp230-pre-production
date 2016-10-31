@@ -1,4 +1,6 @@
 #pragma once
+#include "perlin_noise.h"
+#include "mesh.h"
 
 
 class Game
@@ -25,8 +27,10 @@ private:
   void initialiseOpenGL();
   void initialiseGlew();
 
+
   void update();
   void handleEvents();
   void render();
+
 };
 

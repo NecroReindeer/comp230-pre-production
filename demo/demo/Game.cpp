@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Game.h"
 #include "InitialisationError.h"
+#include "perlin_noise.h"
 
 // Instance of game for singleton design pattern
 Game* Game::instance = nullptr;
@@ -80,6 +81,9 @@ void Game::initialiseOpenGL()
 }
 
 
+
+
+
 void Game::initialiseGlew()
 {
   glewExperimental = GL_TRUE;
@@ -91,15 +95,28 @@ void Game::initialiseGlew()
 }
 
 
+
 void Game::run()
 {
   running = true;
 
   //Initialise objects always present in the game from the start here
+  perlin_noise pn;
+  for (int x = 0; x < 15; x++)
+  {
+	  for (int y = 0; y < 15; y++) //creating a grid
+	  {
+		  double perlinResult = pn.noise(x, y, 0); //perlin result equals the x,y coordinate
+	  }
+  }
+
+  Mesh mesh;
+  mesh.addSquare(glm::vec3(0, 0, 0), glm::vec3(1, 0, 0), glm::vec3(1, 1, 0), glm::vec3(0, 1, 0), glm::vec3(1,0,0) , 0,0,0,0);
 
   // Main loop
   while (running)
   {
+	  
     handleEvents();
     update();
     render();

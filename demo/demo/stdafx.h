@@ -32,3 +32,6 @@
 #include <glm.hpp>
 #include <gtx\transform.hpp>
 #include <gtc\matrix_transform.hpp>
+#include <algorithm>
+#include <memory>
+#include <numeric>
