@@ -96,6 +96,9 @@ void Game::run()
   running = true;
 
   //Initialise objects always present in the game from the start here
+   BranchManager behviourTree(&falcon);
+   falconBehaviour = behviourTree;
+
 
   // Main loop
   while (running)
@@ -110,6 +113,7 @@ void Game::run()
 void Game::update()
 {
   //Call to updates for objects in the game
+	falconBehaviour.update();
 }
 
 
@@ -130,6 +134,8 @@ void Game::handleEvents()
         break;
     }
   }
+  const Uint8* keyboardState = SDL_GetKeyboardState(nullptr);
+  inputHandler.handleKeyBoardInput(keyboardState);
 }
 
 

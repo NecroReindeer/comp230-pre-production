@@ -1,6 +1,5 @@
 #pragma once
 #include "Node.h"
-#include "Falcon.h"
 
 class LeafNode :
 	public Node
@@ -11,7 +10,7 @@ public:
 	//! Destructor
 	~LeafNode();
 
-	Node::NodeStates update();
+	Node::NodeStates update(int animalHealth);
 
 	bool checkHealth(int currentHealth, int healthThreshold);
 };

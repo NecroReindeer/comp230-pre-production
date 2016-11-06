@@ -8,12 +8,14 @@ public:
 	~PlayerInput();
 
 	//! Possible character directions / valid play input
-	enum class KeyboardDirections { Up, Down, Left, Right, None };
+	enum class KeyboardInput { Up, Down, Left, Right, None };
+
 	//! The direction the chatacter is currently moving in
-	KeyboardDirections currentDirection;
+	KeyboardInput currentDirection;
 
 	//! Check the keyboard state to see if a valid key has been pressed
 	void handleKeyBoardInput(const Uint8* keyboardState);
+
 	//! Check the mouse state to see where the mosue is and if a button has been pressed
 	void handleKeyMouseInput(const Uint8* keyboardState);
 

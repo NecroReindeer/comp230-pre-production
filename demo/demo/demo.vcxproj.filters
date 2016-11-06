@@ -22,6 +22,12 @@
     <Filter Include="Header Files\Nodes\Abstract Nodes">
       <UniqueIdentifier>{6eede321-d10b-404a-b929-08381e917b61}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Nodes\Abstract Nodes">
+      <UniqueIdentifier>{d6f49dec-8692-4960-9e68-054e43cc0a2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Companions">
+      <UniqueIdentifier>{c122d4ab-0de3-4141-884d-5db8e48bda08}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -45,9 +51,6 @@
     <ClInclude Include="InitialisationError.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Falcon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Node.h">
       <Filter>Header Files\Nodes\Abstract Nodes</Filter>
     </ClInclude>
@@ -64,10 +67,19 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DeadBranch.h">
+      <Filter>Header Files\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="IdleBranch.h">
+      <Filter>Header Files\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerInput.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Animal.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Companions</Filter>
+    </ClInclude>
+    <ClInclude Include="Falcon.h">
+      <Filter>Header Files\Companions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -86,26 +98,32 @@
     <ClCompile Include="Falcon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Node.cpp">
-      <Filter>Source Files\Nodes</Filter>
-    </ClCompile>
-    <ClCompile Include="CompositeNode.cpp">
-      <Filter>Source Files\Nodes</Filter>
-    </ClCompile>
-    <ClCompile Include="DecoratorNode.cpp">
-      <Filter>Source Files\Nodes</Filter>
-    </ClCompile>
-    <ClCompile Include="LeafNode.cpp">
-      <Filter>Source Files\Nodes</Filter>
-    </ClCompile>
     <ClCompile Include="BranchManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DeadBranch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Animal.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeadBranch.cpp">
+      <Filter>Source Files\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositeNode.cpp">
+      <Filter>Source Files\Nodes\Abstract Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="DecoratorNode.cpp">
+      <Filter>Source Files\Nodes\Abstract Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="LeafNode.cpp">
+      <Filter>Source Files\Nodes\Abstract Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>Source Files\Nodes\Abstract Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="IdleBranch.cpp">
+      <Filter>Source Files\Nodes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

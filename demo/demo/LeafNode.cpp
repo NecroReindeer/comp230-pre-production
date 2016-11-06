@@ -11,15 +11,15 @@ LeafNode::~LeafNode()
 {
 }
 
+Node::NodeStates LeafNode::update(int animalHealth)
+{
+	return Node::NodeStates::Success;
+}
+
 bool LeafNode::checkHealth(int currentHealth, int healthThreshold)
 {
 	if (currentHealth <= healthThreshold)
 		return true;
 	else
 		return false;
-}
-
-Node::NodeStates LeafNode::update()
-{
-	return Node::NodeStates::Running;
 }

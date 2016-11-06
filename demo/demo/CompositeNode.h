@@ -17,6 +17,9 @@ public:
 	// Only one needs to be chosen
 	void selector();
 
-	Node::NodeStates update();
+	Node::NodeStates update(int animalHealth);
+
+private:
+	std::vector<Node> childNodes;
 };
 

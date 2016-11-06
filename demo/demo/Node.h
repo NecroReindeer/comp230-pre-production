@@ -15,6 +15,6 @@ public:
 	NodeStates nodeState;
 	
 	//! Virtual update function
-	virtual Node::NodeStates update() =0;
+	Node::NodeStates update(int animalHealth);
 };
 

@@ -1,6 +1,7 @@
 #pragma once
 #include "Falcon.h"
 #include"BranchManager.h"
+#include"PlayerInput.h"
 
 
 class Game
@@ -12,6 +13,10 @@ public:
   static const int WINDOW_HEIGHT = 480;
 
   void run();
+
+  Falcon falcon;
+  BranchManager falconBehaviour;
+  PlayerInput inputHandler;
 
 private:
   Game();
