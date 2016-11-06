@@ -166,6 +166,7 @@
     <ClInclude Include="Falcon.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="IdleBranch.h" />
+    <ClInclude Include="IdleRestingNode.h" />
     <ClInclude Include="InitialisationError.h" />
     <ClInclude Include="LeafNode.h" />
     <ClInclude Include="Node.h" />
@@ -184,6 +185,7 @@
     <ClCompile Include="Falcon.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="IdleBranch.cpp" />
+    <ClCompile Include="IdleRestingNode.cpp" />
     <ClCompile Include="InitialisationError.cpp" />
     <ClCompile Include="LeafNode.cpp" />
     <ClCompile Include="Node.cpp" />

@@ -15,5 +15,5 @@ CompositeNode::~CompositeNode()
 Node::NodeStates CompositeNode::update(int animalHealth)
 {
 	std::cout << "called composite update " << std::endl;
-	return Node::NodeStates::Success;
+	return Node::NodeStates::Running;
 }

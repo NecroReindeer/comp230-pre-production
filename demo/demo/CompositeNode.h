@@ -9,7 +9,7 @@ public:
 	//! Destructor
 	~CompositeNode();
 
-	Node::NodeStates update(int animalHealth);
+	virtual Node::NodeStates update(int animalHealth);
 
 private:
 	//std::vector<Node> childNodes;

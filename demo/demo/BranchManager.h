@@ -23,8 +23,8 @@ public:
 
 	void update();
 	//! returns the companions current health
-	// to be passed into nodes
 	int getCompanionHealth();
+
 	//! Checks the current health against a given number and returns a bool
 	bool checkHealth(int healthThreshold);
 	

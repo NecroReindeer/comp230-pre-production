@@ -5,7 +5,6 @@
 BranchManager::BranchManager(Falcon* theFalcon)
 {
 	falcon = theFalcon;
-	
 	currentNode = std::make_shared<IdleBranch>(idle);
 }
 
@@ -33,7 +32,7 @@ void BranchManager::update()
 {
 	currentNode->update(getCompanionHealth());
 
-	if (currentNode->nodeState == Node::NodeStates::Failure )
+	if (currentNode->nodeState== Node::NodeStates::Failure )
 	{
 		changeBranch();
 	}

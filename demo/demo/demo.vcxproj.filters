@@ -81,6 +81,9 @@
     <ClInclude Include="Falcon.h">
       <Filter>Header Files\Companions</Filter>
     </ClInclude>
+    <ClInclude Include="IdleRestingNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -124,6 +127,9 @@
     </ClCompile>
     <ClCompile Include="IdleBranch.cpp">
       <Filter>Source Files\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="IdleRestingNode.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
