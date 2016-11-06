@@ -11,7 +11,3 @@ Node::~Node()
 {
 }
 
-Node::NodeStates Node::update(int animalHealth)
-{
-	return Node::NodeStates::Running;
-}

@@ -1,20 +1,32 @@
 #pragma once
-#include"CompositeNode.h"
 #include "Falcon.h"
+#include"DeadBranch.h"
+#include"IdleBranch.h"
+
 class BranchManager
 {
 public:
+	//! Constructor
 	BranchManager();
+	BranchManager(Falcon* theFalcon);
 	~BranchManager();
 
-	// Node that is running
-	CompositeNode currentNode;
+	// Pointer to the node that is running
+	std::shared_ptr<CompositeNode> currentNode;
+
+	IdleBranch idle;
 
 	//!Pointer to falcon
 	Falcon* falcon;
 
-	void update();
-	
+	void changeBranch();
 
+	void update();
+	//! returns the companions current health
+	// to be passed into nodes
+	int getCompanionHealth();
+	//! Checks the current health against a given number and returns a bool
+	bool checkHealth(int healthThreshold);
+	
 };
 

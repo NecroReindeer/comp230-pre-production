@@ -14,7 +14,7 @@ public:
 	enum class NodeStates { Success, Failure, Running };
 	NodeStates nodeState;
 	
-	//! Virtual update function
-	Node::NodeStates update(int animalHealth);
+	//!  update function
+	// Node::NodeStates update(int animalHealth);
 };
 

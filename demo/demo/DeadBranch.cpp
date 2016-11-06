@@ -11,17 +11,9 @@ DeadBranch::~DeadBranch()
 {
 }
 
-Node::NodeStates DeadBranch::update(Falcon* falcon)
+Node::NodeStates DeadBranch::update(int animalHealth)
 {
-	if (dead.checkHealth(falcon->getHealth(), 0))
-	{
-		dead.nodeState == Node::NodeStates::Running;
-		return Node::NodeStates::Running;
-	}
-	else
-	{
-		dead.nodeState == Node::NodeStates::Failure;
-		return Node::NodeStates::Failure;
-	}
+	std::cout << "dead" << std::endl;
+	return Node::NodeStates::Running;
 }
 

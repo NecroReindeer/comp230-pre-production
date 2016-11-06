@@ -1,5 +1,7 @@
 #pragma once
-class Falcon : public Falcon
+#include"Animal.h"
+
+class Falcon : public Animal
 {
 	//! Main class for the Falcon
 public:

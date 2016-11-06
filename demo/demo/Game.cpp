@@ -114,6 +114,7 @@ void Game::update()
 {
   //Call to updates for objects in the game
 	falconBehaviour.update();
+	falcon.setHealth(falcon.getHealth() - 1);
 }
 
 

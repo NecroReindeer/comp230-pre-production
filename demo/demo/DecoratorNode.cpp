@@ -16,10 +16,10 @@ void DecoratorNode::invert(Node::NodeStates currentState)
 {
 	if (currentState == Node::NodeStates::Failure)
 	{
-		currentState == Node::NodeStates::Success;
+		currentState = Node::NodeStates::Success;
 	}
 	else if (currentState == Node::NodeStates::Success)
 	{
-		currentState == Node::NodeStates::Failure;
+		currentState = Node::NodeStates::Failure;
 	}
 }

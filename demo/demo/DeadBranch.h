@@ -8,8 +8,8 @@ public:
 	DeadBranch();
 	~DeadBranch();
 
+	NodeStates nodeState = Node::NodeStates::Running;
 
-	Node::NodeStates update(Falcon* falcon);
-	LeafNode dead;
+	Node::NodeStates update(int animalHealth);
 };
 
