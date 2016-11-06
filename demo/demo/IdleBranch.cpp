@@ -15,5 +15,7 @@ Node::NodeStates IdleBranch::update(int animalHealth)
 {
 	std::cout << "idle update" << std::endl;
 
-	return Node::NodeStates::Failure;
+	if (restingNode.nodeState == Node::NodeStates::Failure)
+		return Node::NodeStates::Failure;
+	
 }

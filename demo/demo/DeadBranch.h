@@ -11,5 +11,7 @@ public:
 	NodeStates nodeState = Node::NodeStates::Running;
 
 	Node::NodeStates update(int animalHealth);
+
+	LeafNode deadNode;
 };
 

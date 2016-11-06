@@ -113,8 +113,9 @@ void Game::run()
 void Game::update()
 {
   //Call to updates for objects in the game
+	falcon.update();
 	falconBehaviour.update();
-	falcon.setHealth(falcon.getHealth() - 1);
+	falcon.setHealth(falcon.getHealth() - 1);  // for testing branch switching
 }
 
 

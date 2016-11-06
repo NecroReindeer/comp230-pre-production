@@ -18,9 +18,6 @@ BranchManager::~BranchManager()
 
 void BranchManager::changeBranch()
 {
-	// check player input
-	// check health
-
 	if (falcon->getHealth() == 0)
 	{
 		currentNode = std::make_shared<DeadBranch>();

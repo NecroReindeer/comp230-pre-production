@@ -10,3 +10,9 @@ Falcon::Falcon()
 Falcon::~Falcon()
 {
 }
+
+void Falcon::update()
+{
+	if (health <= 0)
+		health = 0;
+}

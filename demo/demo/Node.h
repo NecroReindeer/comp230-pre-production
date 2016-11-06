@@ -1,6 +1,5 @@
 #pragma once
 
-class Falcon;
 //! Abstract node that other node types will inherit from
 class Node
 {
