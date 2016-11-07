@@ -28,6 +28,9 @@
     <Filter Include="Header Files\Companions">
       <UniqueIdentifier>{c122d4ab-0de3-4141-884d-5db8e48bda08}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Companions">
+      <UniqueIdentifier>{ae015baa-b77e-46d0-a520-a479c32a5cb7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -75,14 +78,14 @@
     <ClInclude Include="PlayerInput.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Animal.h">
-      <Filter>Header Files\Companions</Filter>
-    </ClInclude>
     <ClInclude Include="Falcon.h">
       <Filter>Header Files\Companions</Filter>
     </ClInclude>
     <ClInclude Include="IdleRestingNode.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Companion.h">
+      <Filter>Header Files\Companions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -98,13 +101,7 @@
     <ClCompile Include="InitialisationError.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Falcon.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="BranchManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Animal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DeadBranch.cpp">
@@ -130,6 +127,12 @@
     </ClCompile>
     <ClCompile Include="IdleRestingNode.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Falcon.cpp">
+      <Filter>Source Files\Companions</Filter>
+    </ClCompile>
+    <ClCompile Include="Companion.cpp">
+      <Filter>Source Files\Companions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

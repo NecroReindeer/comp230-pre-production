@@ -13,12 +13,16 @@ DeadBranch::~DeadBranch()
 
 Node::NodeStates DeadBranch::update(int animalHealth)
 {
-	std::cout << "dead branch" << std::endl;
+	std::cout << "dead update" << std::endl;
 
 	if (deadNode.checkHealth(animalHealth, 0))
-		return Node::NodeStates::Running;
+	{
+		nodeState = Node::NodeStates::Running;
+		return nodeState;
+	}
+		
 	else
-		// Should never fail
+		// Should never fail as falcon can not leave dead branch
 		return Node::NodeStates::Failure;
 }
 

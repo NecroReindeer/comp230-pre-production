@@ -4,23 +4,29 @@
 #include"IdleBranch.h"
 
 class BranchManager
-{
+{ //! Class that manages the companions behaviour by managing the different branches 
 public:
 	//! Constructor
 	BranchManager();
+	//! Constructor where companion is passed in
 	BranchManager(Falcon* theFalcon);
+	//! Destructor
 	~BranchManager();
 
 	// Pointer to the node that is running
 	std::shared_ptr<CompositeNode> currentNode;
 
 	IdleBranch idle;
+	DeadBranch deadBranch;
+	
 
-	//!Pointer to falcon
+	//! Pointer to companion animal
 	Falcon* falcon;
 
+	//! changeBranch is called when the current branch fails of succedes
 	void changeBranch();
 
+	//! Updates the current branch
 	void update();
 	//! returns the companions current health
 	int getCompanionHealth();

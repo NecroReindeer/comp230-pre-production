@@ -29,7 +29,7 @@ void BranchManager::update()
 {
 	currentNode->update(getCompanionHealth());
 
-	if (currentNode->nodeState== Node::NodeStates::Failure )
+	if (currentNode->nodeState == Node::NodeStates::Failure )
 	{
 		changeBranch();
 	}
