@@ -102,9 +102,9 @@ void Game::run()
 
   //Initialise objects always present in the game from the start here
   perlin_noise pn;
-  for (int x = 0; x < 15; x++)
+  for (int x = 0; x < 5; x++)
   {
-	  for (int y = 0; y < 15; y++) //creating a grid
+	  for (int y = 0; y < 5; y++) //creating a grid
 	  {
 		  double perlinResult = pn.noise(x, y, 0); //perlin result equals the x,y coordinate
 	  }
