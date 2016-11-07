@@ -13,5 +13,6 @@ public:
 	Node::NodeStates update(Companion* companion);
 
 	bool checkHealth(int currentHealth, int healthThreshold);
+	bool checkForCommand(Companion* companion);
 };
 

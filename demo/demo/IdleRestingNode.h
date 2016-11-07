@@ -11,5 +11,6 @@ public:
 	Node::NodeStates update(Companion* companion);
 
 	LeafNode lowHealth;
+	LeafNode resting;
 };
 

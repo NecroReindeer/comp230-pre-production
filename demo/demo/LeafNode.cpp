@@ -23,3 +23,10 @@ bool LeafNode::checkHealth(int currentHealth, int healthThreshold)
 	else
 		return false;
 }
+
+bool LeafNode::checkForCommand(Companion* companion)
+{
+	// TODO: add command bool to Companion
+	//return companion.commandPresent;
+	return false;
+}
