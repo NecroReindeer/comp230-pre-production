@@ -81,11 +81,11 @@
     <ClInclude Include="Falcon.h">
       <Filter>Header Files\Companions</Filter>
     </ClInclude>
-    <ClInclude Include="IdleRestingNode.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Companion.h">
       <Filter>Header Files\Companions</Filter>
+    </ClInclude>
+    <ClInclude Include="IdleRestingNode.h">
+      <Filter>Header Files\Nodes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -125,14 +125,14 @@
     <ClCompile Include="IdleBranch.cpp">
       <Filter>Source Files\Nodes</Filter>
     </ClCompile>
-    <ClCompile Include="IdleRestingNode.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Falcon.cpp">
       <Filter>Source Files\Companions</Filter>
     </ClCompile>
     <ClCompile Include="Companion.cpp">
       <Filter>Source Files\Companions</Filter>
+    </ClCompile>
+    <ClCompile Include="IdleRestingNode.cpp">
+      <Filter>Source Files\Nodes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,5 @@
 #pragma once
-#include "Falcon.h"
+#include "Companion.h"
 #include"DeadBranch.h"
 #include"IdleBranch.h"
 
@@ -9,7 +9,7 @@ public:
 	//! Constructor
 	BranchManager();
 	//! Constructor where companion is passed in
-	BranchManager(Falcon* theFalcon);
+	BranchManager(Companion* theCompanion);
 	//! Destructor
 	~BranchManager();
 
@@ -21,7 +21,7 @@ public:
 	
 
 	//! Pointer to companion animal
-	Falcon* falcon;
+	Companion* companion;
 
 	//! changeBranch is called when the current branch fails of succedes
 	void changeBranch();

@@ -12,7 +12,7 @@ CompositeNode::~CompositeNode()
 }
 
 
-Node::NodeStates CompositeNode::update(int animalHealth)
+Node::NodeStates CompositeNode::update(Companion* companion)
 {
 	std::cout << "called composite update " << std::endl;
 	return Node::NodeStates::Running;

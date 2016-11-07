@@ -2,9 +2,9 @@
 #include "BranchManager.h"
 
 
-BranchManager::BranchManager(Falcon* theFalcon)
+BranchManager::BranchManager(Companion* theCompanion)
 {
-	falcon = theFalcon;
+	companion = theCompanion;
 	currentNode = std::make_shared<IdleBranch>(idle);
 }
 
@@ -18,16 +18,16 @@ BranchManager::~BranchManager()
 
 void BranchManager::changeBranch()
 {
-	if (falcon->getHealth() == 0)
+	if (companion->getHealth() == 0)
 	{
 		currentNode = std::make_shared<DeadBranch>();
-		std::cout << "changed branch " << std::endl;
+		std::cout << "changed branch " << std::endl;  // for testing
 	}
 }
 
 void BranchManager::update()
 {
-	currentNode->update(getCompanionHealth());
+	currentNode->update(companion);
 
 	if (currentNode->nodeState == Node::NodeStates::Failure )
 	{
@@ -41,5 +41,5 @@ void BranchManager::update()
 
 int BranchManager::getCompanionHealth()
 {
-	return falcon->getHealth();
+	return companion->getHealth();
 }

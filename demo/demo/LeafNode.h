@@ -10,7 +10,7 @@ public:
 	//! Destructor
 	~LeafNode();
 
-	Node::NodeStates update(int animalHealth);
+	Node::NodeStates update(Companion* companion);
 
 	bool checkHealth(int currentHealth, int healthThreshold);
 };

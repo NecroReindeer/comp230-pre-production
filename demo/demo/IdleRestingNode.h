@@ -8,7 +8,7 @@ public:
 	IdleRestingNode();
 	~IdleRestingNode();
 
-	Node::NodeStates update(int animalHealth);
+	Node::NodeStates update(Companion* companion);
 
 	LeafNode lowHealth;
 };

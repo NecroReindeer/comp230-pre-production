@@ -11,9 +11,9 @@ IdleRestingNode::~IdleRestingNode()
 {
 }
 
-Node::NodeStates IdleRestingNode::update(int animalHealth)
+Node::NodeStates IdleRestingNode::update(Companion* companion)
 {
-	if ((lowHealth.checkHealth(animalHealth, 10)))
+	if ((lowHealth.checkHealth(companion->getHealth(), 10)))
 	{
 		return Node::NodeStates::Failure;
 	}

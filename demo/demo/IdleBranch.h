@@ -16,7 +16,7 @@ public:
 	//! Current state of the branch
 	NodeStates nodeState = Node::NodeStates::Running;
 	//! Updates branch to check for Node changes
-	Node::NodeStates update(int animalHealth);
+	Node::NodeStates update(Companion* companion);
 	
 	//! Child node: Selector that choses node depending on whether falcon is injured
 	IdleRestingNode restingNode;

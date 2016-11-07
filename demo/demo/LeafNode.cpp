@@ -11,7 +11,7 @@ LeafNode::~LeafNode()
 {
 }
 
-Node::NodeStates LeafNode::update(int animalHealth)
+Node::NodeStates LeafNode::update(Companion* companion)
 {
 	return Node::NodeStates::Success;
 }

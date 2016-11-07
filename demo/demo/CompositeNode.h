@@ -10,7 +10,7 @@ public:
 	~CompositeNode();
 
 	//! Updates the Node
-	virtual Node::NodeStates update(int animalHealth);
+	virtual Node::NodeStates update(Companion* companion);
 
 private:
 	//std::vector<Node> childNodes;

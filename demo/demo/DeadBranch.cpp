@@ -11,18 +11,17 @@ DeadBranch::~DeadBranch()
 {
 }
 
-Node::NodeStates DeadBranch::update(int animalHealth)
+Node::NodeStates DeadBranch::update(Companion* companion)
 {
-	std::cout << "dead update" << std::endl;
+	std::cout << "dead update" << std::endl;  // for testing
 
-	if (deadNode.checkHealth(animalHealth, 0))
-	{
+	if (deadNode.checkHealth(companion->getHealth(), 0))
 		nodeState = Node::NodeStates::Running;
-		return nodeState;
-	}
 		
 	else
 		// Should never fail as falcon can not leave dead branch
-		return Node::NodeStates::Failure;
+		nodeState = Node::NodeStates::Failure;
+	
+	return nodeState;
 }
 

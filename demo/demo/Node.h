@@ -1,5 +1,5 @@
 #pragma once
-
+#include"Companion.h"
 
 class Node
 {//! Abstract node that other node types will inherit from

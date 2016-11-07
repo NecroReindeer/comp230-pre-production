@@ -11,9 +11,9 @@ IdleBranch::~IdleBranch()
 {
 }
 
-Node::NodeStates IdleBranch::update(int animalHealth)
+Node::NodeStates IdleBranch::update(Companion* companion)
 {
-	std::cout << "idle update" << std::endl;
+	std::cout << "idle update" << std::endl;  // for testing
 
 	if (restingNode.nodeState == Node::NodeStates::Failure)
 		return Node::NodeStates::Failure;
