@@ -6,7 +6,6 @@ Falcon::Falcon()
 {
 }
 
-
 Falcon::~Falcon()
 {
 }
