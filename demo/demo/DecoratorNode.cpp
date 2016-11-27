@@ -12,14 +12,26 @@ DecoratorNode::~DecoratorNode()
 }
 
 // Inverts the input if the input is failure or success
-void DecoratorNode::invert(Node::NodeStates currentState)
+Node::NodeStates DecoratorNode::invertState(Node::NodeStates currentState)
 {
 	if (currentState == Node::NodeStates::Failure)
 	{
-		currentState = Node::NodeStates::Success;
+		return Node::NodeStates::Success;
 	}
 	else if (currentState == Node::NodeStates::Success)
 	{
-		currentState = Node::NodeStates::Failure;
+		return Node::NodeStates::Failure;
+	}
+}
+
+bool DecoratorNode::invertBool(bool state)
+{
+	if (state == false)
+	{
+		return true;
+	}
+	else if (state == true)
+	{
+		return false;
 	}
 }

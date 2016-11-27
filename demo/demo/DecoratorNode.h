@@ -11,7 +11,9 @@ public:
 
 
 	//! Inverts the result: makes true = false
-	void invert(Node::NodeStates currentState);
+	Node::NodeStates invertState(Node::NodeStates currentState);
+
+	bool invertBool(bool state);
 
 
 };
