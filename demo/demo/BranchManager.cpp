@@ -23,6 +23,11 @@ void BranchManager::changeBranch()
 		currentNode = std::make_shared<DeadBranch>();
 		std::cout << "changed branch " << std::endl;  // for testing
 	}
+	else if (companion->getHealth() < 40 && companion->getHealth() > 0)
+	{
+		currentNode = std::make_shared<PanicBranch>();
+		std::cout << "changed branch " << std::endl;  // for testing
+	}
 }
 
 void BranchManager::update()

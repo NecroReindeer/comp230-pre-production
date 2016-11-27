@@ -167,6 +167,7 @@
     <ClInclude Include="Falcon.h" />
     <ClInclude Include="Floor.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="HoodedNode.h" />
     <ClInclude Include="IdleBranch.h" />
     <ClInclude Include="IdleRestingNode.h" />
     <ClInclude Include="InitialisationError.h" />
@@ -195,6 +196,7 @@
     <ClCompile Include="Falcon.cpp" />
     <ClCompile Include="Floor.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="HoodedNode.cpp" />
     <ClCompile Include="IdleBranch.cpp" />
     <ClCompile Include="IdleRestingNode.cpp" />
     <ClCompile Include="InitialisationError.cpp" />

@@ -10,9 +10,9 @@ public:
 	~DecoratorNode();
 
 
-	//! Inverts the result: makes true = false
+	//! Inverts a NodeState
 	Node::NodeStates invertState(Node::NodeStates currentState);
-
+	//! Inverts a bool
 	bool invertBool(bool state);
 
 

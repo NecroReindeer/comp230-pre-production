@@ -30,6 +30,7 @@ public:
 	//! sets value of health
 	virtual int setHealth(int newHealth) { return health = newHealth; }
 
+	bool isHooded = false;
 private:
 	//! int for the companions's current location
 	int x, y, z;

@@ -120,6 +120,9 @@
     <ClInclude Include="PanicBranch.h">
       <Filter>Header Files\Nodes</Filter>
     </ClInclude>
+    <ClInclude Include="HoodedNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -193,6 +196,9 @@
     </ClCompile>
     <ClCompile Include="PanicBranch.cpp">
       <Filter>Source Files\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="HoodedNode.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -2,6 +2,7 @@
 #include "Companion.h"
 #include"DeadBranch.h"
 #include"IdleBranch.h"
+#include"PanicBranch.h"
 
 class BranchManager
 { //! Class that manages the companions behaviour by managing the different branches 
@@ -19,6 +20,7 @@ public:
 
 	IdleBranch idle;
 	DeadBranch deadBranch;
+	PanicBranch panicBranch;
 	
 
 	//! Pointer to companion animal
