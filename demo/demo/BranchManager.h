@@ -5,6 +5,7 @@
 
 class BranchManager
 { //! Class that manages the companions behaviour by managing the different branches 
+	//TODO : replace with selector
 public:
 	//! Constructor
 	BranchManager();

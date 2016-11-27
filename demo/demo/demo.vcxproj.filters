@@ -93,7 +93,12 @@
     <ClInclude Include="IdleRestingNode.h">
       <Filter>Header Files\Nodes</Filter>
     </ClInclude>
-    <ClInclude Include="Mesh.h">
+    <ClInclude Include="SelectorNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SequenceNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>    <ClInclude Include="Mesh.h">
       <Filter>Header Files\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="Shader.h">
@@ -110,8 +115,7 @@
     </ClInclude>
     <ClInclude Include="ErrorMessage.h">
       <Filter>Header Files\Graphics</Filter>
-    </ClInclude>
-  </ItemGroup>
+    </ClInclude>  </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
@@ -176,7 +180,12 @@
     <ClCompile Include="ErrorMessage.cpp">
       <Filter>Header Files\Graphics</Filter>
     </ClCompile>
-  </ItemGroup>
+    <ClCompile Include="SelectorNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SequenceNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>  </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="demo.rc">
       <Filter>Resource Files</Filter>

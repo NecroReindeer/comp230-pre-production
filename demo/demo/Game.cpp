@@ -143,6 +143,9 @@ void Game::run()
 			  break;
 		  }
 	  }
+	  const Uint8* keyboardState = SDL_GetKeyboardState(nullptr);
+	  if (keyboardState[SDL_SCANCODE_ESCAPE])
+		  running = false;
 	   
 	  falcon.update();
 	  falconBehaviour.update();
@@ -165,7 +168,7 @@ void Game::run()
 
 	  glm::vec4 playerForward = playerLook;
 
-	  const Uint8* keyboardState = SDL_GetKeyboardState(nullptr);
+
 	  if (keyboardState[SDL_SCANCODE_W])
 	  {
 		  playerPosition += playerForward * movementMultipler;
