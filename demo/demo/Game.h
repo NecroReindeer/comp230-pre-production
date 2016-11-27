@@ -2,6 +2,9 @@
 #include "Falcon.h"
 #include"BranchManager.h"
 #include"PlayerInput.h"
+#include"Shader.h"
+#include"Floor.h"
+#include"Mesh.h"
 
 
 class Game
@@ -17,6 +20,7 @@ public:
   Falcon falcon;
   BranchManager falconBehaviour;
   PlayerInput inputHandler;
+  Shader shaders;
 
 private:
   Game();
@@ -24,7 +28,7 @@ private:
   static Game* instance;
 
   SDL_Window* window;
-  SDL_GLContext context;
+  SDL_GLContext glContext;
 
   bool running;
 
@@ -32,8 +36,11 @@ private:
   void initialiseOpenGL();
   void initialiseGlew();
 
-  void update();
-  void handleEvents();
-  void render();
+  float mouseSensitivity = 0.01f;
+  float movementMultipler = 0.05f;
+
+  float playerPitch = 0;
+  float playerYaw = 0;
+  int mouseX, mouseY;
 };
 

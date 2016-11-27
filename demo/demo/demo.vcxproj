@@ -71,23 +71,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>..\..\Libraries\SDL2-2.0.4\include;..\..\Libraries\glew-1.13.0\include;..\..\Libraries\glm;..\..\Libraries\gli;$(IncludePath)</IncludePath>
-    <LibraryPath>..\..\Libraries\SDL2-2.0.4\lib\x86;..\..\Libraries\glew-1.13.0\lib\Release\Win32;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\..\Libraries\SDL2-2.0.4\include;..\..\Libraries\glew-1.13.0\include;..\..\Libraries\glm;..\..\Libraries\gli;..\..\Libraries\SDL2_image-2.0.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\Libraries\SDL2-2.0.4\lib\x86;..\..\Libraries\glew-1.13.0\lib\Release\Win32;..\..\Libraries\SDL2_image-2.0.1\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>..\..\Libraries\SDL2-2.0.4\include;..\..\Libraries\glew-1.13.0\include;..\..\Libraries\glm;..\..\Libraries\gli;$(IncludePath)</IncludePath>
-    <LibraryPath>..\..\Libraries\SDL2-2.0.4\lib\x64;..\..\Libraries\glew-1.13.0\lib\Release\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\..\Libraries\SDL2-2.0.4\include;..\..\Libraries\glew-1.13.0\include;..\..\Libraries\glm;..\..\Libraries\gli;..\..\Libraries\SDL2_image-2.0.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\Libraries\SDL2-2.0.4\lib\x64;..\..\Libraries\glew-1.13.0\lib\Release\x64;Libraries\SDL2_image-2.0.1\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>..\..\Libraries\SDL2-2.0.4\include;..\..\Libraries\glew-1.13.0\include;..\..\Libraries\glm;..\..\Libraries\gli;$(IncludePath)</IncludePath>
-    <LibraryPath>..\..\Libraries\SDL2-2.0.4\lib\x86;..\..\Libraries\glew-1.13.0\lib\Release\Win32;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\..\Libraries\SDL2-2.0.4\include;..\..\Libraries\glew-1.13.0\include;..\..\Libraries\glm;..\..\Libraries\gli;..\..\Libraries\SDL2_image-2.0.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\Libraries\SDL2-2.0.4\lib\x86;..\..\Libraries\glew-1.13.0\lib\Release\Win32;..\..\Libraries\SDL2_image-2.0.1\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>..\..\Libraries\SDL2-2.0.4\include;..\..\Libraries\glew-1.13.0\include;..\..\Libraries\glm;..\..\Libraries\gli;$(IncludePath)</IncludePath>
-    <LibraryPath>..\..\Libraries\SDL2-2.0.4\lib\x64;..\..\Libraries\glew-1.13.0\lib\Release\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\..\Libraries\SDL2-2.0.4\include;..\..\Libraries\glew-1.13.0\include;..\..\Libraries\glm;..\..\Libraries\gli;..\..\Libraries\SDL2_image-2.0.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\Libraries\SDL2-2.0.4\lib\x64;..\..\Libraries\glew-1.13.0\lib\Release\x64;Libraries\SDL2_image-2.0.1\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -100,7 +100,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;glew32.lib;glew32s.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;glew32.lib;glew32s.lib;opengl32.lib;glu32.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -114,7 +114,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;glew32.lib;glew32s.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;glew32.lib;glew32s.lib;opengl32.lib;glu32.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -132,7 +132,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;glew32.lib;glew32s.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;glew32.lib;glew32s.lib;opengl32.lib;glu32.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -150,7 +150,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;glew32.lib;glew32s.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;glew32.lib;glew32s.lib;opengl32.lib;glu32.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -163,17 +163,23 @@
     <ClInclude Include="DeadBranch.h" />
     <ClInclude Include="DecoratorNode.h" />
     <ClInclude Include="demo.h" />
+    <ClInclude Include="ErrorMessage.h" />
     <ClInclude Include="Falcon.h" />
+    <ClInclude Include="Floor.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="IdleBranch.h" />
     <ClInclude Include="IdleRestingNode.h" />
     <ClInclude Include="InitialisationError.h" />
     <ClInclude Include="LeafNode.h" />
+    <ClInclude Include="Mesh.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="PlayerInput.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="Shader.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="Vertex.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Companion.cpp" />
@@ -182,20 +188,26 @@
     <ClCompile Include="DeadBranch.cpp" />
     <ClCompile Include="DecoratorNode.cpp" />
     <ClCompile Include="demo.cpp" />
+    <ClCompile Include="ErrorMessage.cpp" />
     <ClCompile Include="Falcon.cpp" />
+    <ClCompile Include="Floor.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="IdleBranch.cpp" />
     <ClCompile Include="IdleRestingNode.cpp" />
     <ClCompile Include="InitialisationError.cpp" />
     <ClCompile Include="LeafNode.cpp" />
+    <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="PlayerInput.cpp" />
+    <ClCompile Include="Shader.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="Vertex.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="demo.rc" />
@@ -203,6 +215,10 @@
   <ItemGroup>
     <Image Include="demo.ico" />
     <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fragment.glsl" />
+    <None Include="vertex.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
