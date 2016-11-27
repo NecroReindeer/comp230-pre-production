@@ -4,7 +4,7 @@
 #include"IdleRestingNode.h"
 
 class IdleBranch :
-	public CompositeNode
+	public CompositeNode  // TODO: Change to Selector
 	//! IdleBranch for when the companion is Idle
 {
 public:

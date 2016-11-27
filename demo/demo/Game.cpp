@@ -99,7 +99,9 @@ void Game::run()
   glGenVertexArrays(1, &VertexArrayID);
   glBindVertexArray(VertexArrayID);
 
+  // loading shaders
   GLuint programID = shaders.loadShaders("vertex.glsl", "fragment.glsl");
+  // setting up uniforms
   GLuint mvpLocation = glGetUniformLocation(programID, "mvp");
   GLuint lightDirectionLocation = glGetUniformLocation(programID, "lightDirection");
   GLuint cameraSpaceLocation = glGetUniformLocation(programID, "cameraSpace");
