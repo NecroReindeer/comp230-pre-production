@@ -74,7 +74,7 @@ void Game::initialiseSDL()
 
 void Game::initialiseOpenGL()
 {
-  glClearColor(0.4f, 0.0f, 0.4f, 0.0f);
+  glClearColor(0.1f, 0.0f, 0.4f, 0.0f);
   // Enable depth test
   glEnable(GL_DEPTH_TEST);
   // Accept fragment if it closer to the camera than the former one
@@ -109,11 +109,14 @@ void Game::run()
 	  {
 		  double perlinResult = pn.noise(x, y, 0); //perlin result equals the x,y coordinate
 		  std::cout << perlinResult << std::endl;
+		  Mesh mesh;
+		  mesh.addSquare(glm::vec3(0, 0, 0), glm::vec3(1, 0, 0), glm::vec3(1, 1, 0), glm::vec3(0, 1, 0), glm::vec3(1, 1, 0), 0, 0, 0, 0);
+		  mesh.createBuffers();
 	  }
   }
 
   Mesh mesh;
-  mesh.addSquare(glm::vec3(0, 0, 0), glm::vec3(1, 0, 0), glm::vec3(1, 1, 0), glm::vec3(0, 1, 0), glm::vec3(1,0,0) , 0,0,0,0);
+  mesh.addSquare(glm::vec3(0, 0, 0), glm::vec3(1, 0, 0), glm::vec3(1, 1, 0), glm::vec3(0, 1, 0), glm::vec3(1,1,0) , 0,0,0,0);
   mesh.createBuffers();
 
   // Main loop
