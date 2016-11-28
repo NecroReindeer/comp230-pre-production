@@ -2,6 +2,7 @@
 #include "Game.h"
 #include "InitialisationError.h"
 #include "perlin_noise.h"
+#include "iostream"
 
 // Instance of game for singleton design pattern
 Game* Game::instance = nullptr;
@@ -107,16 +108,18 @@ void Game::run()
 	  for (int y = 0; y < 5; y++) //creating a grid
 	  {
 		  double perlinResult = pn.noise(x, y, 0); //perlin result equals the x,y coordinate
+		  std::cout << perlinResult << std::endl;
 	  }
   }
 
   Mesh mesh;
   mesh.addSquare(glm::vec3(0, 0, 0), glm::vec3(1, 0, 0), glm::vec3(1, 1, 0), glm::vec3(0, 1, 0), glm::vec3(1,0,0) , 0,0,0,0);
+  mesh.createBuffers();
 
   // Main loop
   while (running)
   {
-	  
+	  mesh.draw();
     handleEvents();
     update();
     render();
