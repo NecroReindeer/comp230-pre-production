@@ -125,6 +125,7 @@ void Game::run()
    BranchManager behviourTree(&falcon);
    falconBehaviour = behviourTree;
    
+   // For testing
    Mesh falconAliveMesh;
    falconAliveMesh.addSphere(1, 16, glm::vec3(1,1,1));
    falconAliveMesh.createBuffers();
@@ -162,8 +163,6 @@ void Game::run()
 	  falconBehaviour.update();
 	  falcon.setHealth(falcon.getHealth() - 1);  // for testing branch switching
 
-
-
 	  SDL_GetRelativeMouseState(&mouseX, &mouseY);
 	  playerYaw -= mouseX * mouseSensitivity;
 	  playerPitch -= mouseY * mouseSensitivity;
@@ -181,7 +180,7 @@ void Game::run()
 
 	  glm::vec4 playerForward = playerLook;
 
-
+	  // TODO: Change to use PlayerInput class
 	  if (keyboardState[SDL_SCANCODE_W])
 	  {
 		  playerPosition += playerForward * movementMultipler;

@@ -22,18 +22,19 @@ public:
 
 
 	//! sets value of x
-	virtual float setX(int newX) { return x = newX; }
+	virtual float setX(float newX) { return x = newX; }
 	//! sets value of y
-	virtual float setY(int newY) { return y = newY; }
+	virtual float setY(float newY) { return y = newY; }
 	//! sets value of z
-	virtual float setZ(int newZ) { return z = newZ; }
+	virtual float setZ(float newZ) { return z = newZ; }
 	//! sets value of health
-	virtual float setHealth(int newHealth) { return health = newHealth; }
+	virtual float setHealth(float newHealth) { return health = newHealth; }
 
 	bool isHooded = false;
 private:
 	//! int for the companions's current location
 	float x, y, z;
+	//! Companions health
 	float health = 100;
 };
 
