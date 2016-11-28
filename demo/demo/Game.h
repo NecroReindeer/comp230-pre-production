@@ -1,6 +1,4 @@
-#pragma once
-#include "Falcon.h"
-#include"BranchManager.h"
+#pragma once 
 #include"PlayerInput.h"
 #include"Shader.h"
 #include"Floor.h"
@@ -17,9 +15,6 @@ public:
 
   void run();
 
-  Falcon falcon;
-  BranchManager falconBehaviour;
-  PlayerInput inputHandler;
   Shader shaders;
 
 private:

@@ -119,12 +119,9 @@ void Game::run()
   SDL_SetRelativeMouseMode(SDL_TRUE);
   SDL_GetRelativeMouseState(nullptr, nullptr);
   Uint32 lastFrameTime = SDL_GetTicks();
+
   Floor floor(-2, 10, "leaf.png");
-  //Initialise objects always present in the game from the start here
-   BranchManager behviourTree(&falcon);
-   falconBehaviour = behviourTree;
-
-
+ 
   // Main loop
   while (running)
   {
@@ -148,10 +145,7 @@ void Game::run()
 	  const Uint8* keyboardState = SDL_GetKeyboardState(nullptr);
 	  if (keyboardState[SDL_SCANCODE_ESCAPE])
 		  running = false;
-	   
-	  falcon.update();
-	  falconBehaviour.update();
-	  falcon.setHealth(falcon.getHealth() - 1);  // for testing branch switching
+	  
 
 	  SDL_GetRelativeMouseState(&mouseX, &mouseY);
 	  playerYaw -= mouseX * mouseSensitivity;
@@ -215,13 +209,15 @@ void Game::run()
 	  glUniform3f(lightDirectionLocation, 1, 1, 1);
 	  glUniform3f(cameraSpaceLocation, playerPosition.x, playerPosition.y, playerPosition.z);
 
-
+	  glm::mat4 mvp;
+	  
 	  // Render floor
 	  transform = glm::mat4();
-	  glm::mat4 mvp = projection * view * transform;
+	  mvp = projection * view * transform;
 	  glUniformMatrix4fv(mvpLocation, 1, GL_FALSE, glm::value_ptr(mvp));
 	  floor.texture.bindTexture();
 	  floor.mesh.draw();
+	  
 
 	  SDL_GL_SwapWindow(window);
   

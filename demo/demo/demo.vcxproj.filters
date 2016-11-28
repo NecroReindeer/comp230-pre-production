@@ -13,21 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Nodes">
-      <UniqueIdentifier>{4c4acd75-8f95-49ad-850e-90ea7cd188aa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Nodes">
-      <UniqueIdentifier>{c3c15314-b058-4edb-a950-c17309525a9b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Nodes\Abstract Nodes">
-      <UniqueIdentifier>{6eede321-d10b-404a-b929-08381e917b61}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Nodes\Abstract Nodes">
-      <UniqueIdentifier>{d6f49dec-8692-4960-9e68-054e43cc0a2e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Companions">
-      <UniqueIdentifier>{c122d4ab-0de3-4141-884d-5db8e48bda08}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Companions">
       <UniqueIdentifier>{ae015baa-b77e-46d0-a520-a479c32a5cb7}</UniqueIdentifier>
     </Filter>
@@ -60,38 +45,8 @@
     <ClInclude Include="InitialisationError.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Node.h">
-      <Filter>Header Files\Nodes\Abstract Nodes</Filter>
-    </ClInclude>
-    <ClInclude Include="CompositeNode.h">
-      <Filter>Header Files\Nodes\Abstract Nodes</Filter>
-    </ClInclude>
-    <ClInclude Include="DecoratorNode.h">
-      <Filter>Header Files\Nodes\Abstract Nodes</Filter>
-    </ClInclude>
-    <ClInclude Include="LeafNode.h">
-      <Filter>Header Files\Nodes\Abstract Nodes</Filter>
-    </ClInclude>
-    <ClInclude Include="BranchManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DeadBranch.h">
-      <Filter>Header Files\Nodes</Filter>
-    </ClInclude>
-    <ClInclude Include="IdleBranch.h">
-      <Filter>Header Files\Nodes</Filter>
-    </ClInclude>
     <ClInclude Include="PlayerInput.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Falcon.h">
-      <Filter>Header Files\Companions</Filter>
-    </ClInclude>
-    <ClInclude Include="Companion.h">
-      <Filter>Header Files\Companions</Filter>
-    </ClInclude>
-    <ClInclude Include="IdleRestingNode.h">
-      <Filter>Header Files\Nodes</Filter>
     </ClInclude>
     <ClInclude Include="Mesh.h">
       <Filter>Header Files\Graphics</Filter>
@@ -111,18 +66,6 @@
     <ClInclude Include="ErrorMessage.h">
       <Filter>Header Files\Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="SelectorNode.h">
-      <Filter>Header Files\Nodes\Abstract Nodes</Filter>
-    </ClInclude>
-    <ClInclude Include="SequenceNode.h">
-      <Filter>Header Files\Nodes\Abstract Nodes</Filter>
-    </ClInclude>
-    <ClInclude Include="PanicBranch.h">
-      <Filter>Header Files\Nodes</Filter>
-    </ClInclude>
-    <ClInclude Include="HoodedNode.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -137,38 +80,14 @@
     <ClCompile Include="InitialisationError.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BranchManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DeadBranch.cpp">
-      <Filter>Source Files\Nodes</Filter>
-    </ClCompile>
     <ClCompile Include="PlayerInput.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CompositeNode.cpp">
-      <Filter>Source Files\Nodes\Abstract Nodes</Filter>
-    </ClCompile>
-    <ClCompile Include="DecoratorNode.cpp">
-      <Filter>Source Files\Nodes\Abstract Nodes</Filter>
-    </ClCompile>
-    <ClCompile Include="LeafNode.cpp">
-      <Filter>Source Files\Nodes\Abstract Nodes</Filter>
-    </ClCompile>
-    <ClCompile Include="Node.cpp">
-      <Filter>Source Files\Nodes\Abstract Nodes</Filter>
-    </ClCompile>
-    <ClCompile Include="IdleBranch.cpp">
-      <Filter>Source Files\Nodes</Filter>
     </ClCompile>
     <ClCompile Include="Falcon.cpp">
       <Filter>Source Files\Companions</Filter>
     </ClCompile>
     <ClCompile Include="Companion.cpp">
       <Filter>Source Files\Companions</Filter>
-    </ClCompile>
-    <ClCompile Include="IdleRestingNode.cpp">
-      <Filter>Source Files\Nodes</Filter>
     </ClCompile>
     <ClCompile Include="Vertex.cpp">
       <Filter>Source Files\Graphics</Filter>
@@ -187,18 +106,6 @@
     </ClCompile>
     <ClCompile Include="ErrorMessage.cpp">
       <Filter>Source Files\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="SelectorNode.cpp">
-      <Filter>Source Files\Nodes\Abstract Nodes</Filter>
-    </ClCompile>
-    <ClCompile Include="SequenceNode.cpp">
-      <Filter>Source Files\Nodes\Abstract Nodes</Filter>
-    </ClCompile>
-    <ClCompile Include="PanicBranch.cpp">
-      <Filter>Source Files\Nodes</Filter>
-    </ClCompile>
-    <ClCompile Include="HoodedNode.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
