@@ -2,6 +2,7 @@
 #include"CompositeNode.h"
 #include "HoodedNode.h"
 #include "DecoratorNode.h"
+
 class PanicBranch :
 	public CompositeNode
 {

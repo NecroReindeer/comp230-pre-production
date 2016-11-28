@@ -14,7 +14,7 @@ public:
 
 private:
 	//! int for the falcon's current location
-	int x, y, z;
-	int health = 100;
+	float x, y, z;
+	float health = 100;
 };
 

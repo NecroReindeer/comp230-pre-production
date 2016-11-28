@@ -119,10 +119,18 @@ void Game::run()
   SDL_SetRelativeMouseMode(SDL_TRUE);
   SDL_GetRelativeMouseState(nullptr, nullptr);
   Uint32 lastFrameTime = SDL_GetTicks();
+
   Floor floor(-2, 10, "leaf.png");
   //Initialise objects always present in the game from the start here
    BranchManager behviourTree(&falcon);
    falconBehaviour = behviourTree;
+   Mesh falconAliveMesh;
+   falconAliveMesh.addSphere(1,4,glm::vec3(1,0,1));
+   falconAliveMesh.createBuffers();
+
+   Mesh falconDeadMesh;
+   falconDeadMesh.addSphere(1, 4, glm::vec3(0, 0, 1));
+   falconDeadMesh.createBuffers();
 
 
   // Main loop
@@ -215,13 +223,26 @@ void Game::run()
 	  glUniform3f(lightDirectionLocation, 1, 1, 1);
 	  glUniform3f(cameraSpaceLocation, playerPosition.x, playerPosition.y, playerPosition.z);
 
-
+	  glm::mat4 mvp;
+	  glm::vec3 falconPos(falcon.getX(), falcon.getY(), falcon.getZ());
+	  //falcon.setY(falcon.getY() + 1);
+	  transform = glm::mat4();
+	  transform = glm::translate(transform, falconPos);
+	  mvp = projection * view * transform;
+	  glUniformMatrix4fv(mvpLocation, 1, GL_FALSE, glm::value_ptr(mvp));
+	  
+	  if (falcon.getHealth() > 10)
+		falconAliveMesh.draw();
+	  else 
+		  falconDeadMesh.draw();
+	  
 	  // Render floor
 	  transform = glm::mat4();
-	  glm::mat4 mvp = projection * view * transform;
+	  mvp = projection * view * transform;
 	  glUniformMatrix4fv(mvpLocation, 1, GL_FALSE, glm::value_ptr(mvp));
 	  floor.texture.bindTexture();
 	  floor.mesh.draw();
+	  
 
 	  SDL_GL_SwapWindow(window);
   

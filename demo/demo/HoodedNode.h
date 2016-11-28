@@ -10,5 +10,6 @@ public:
 	~HoodedNode();
 
 	Node::NodeStates checkForHood(Companion* companion);
+	NodeStates nodeState;
 };
 

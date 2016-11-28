@@ -16,9 +16,10 @@ Node::NodeStates PanicBranch::update(Companion* companion)
 	std::cout << "panic update" << std::endl;  // for testing
 	if (inverter.invertState(hooded.checkForHood(companion)) == Node::NodeStates::Failure)
 	{
-		return Node::NodeStates::Success;
+		return nodeState = Node::NodeStates::Success;
 	}
-	
-	return Node::NodeStates::Failure;
-
+	if (inverter.invertState(hooded.checkForHood(companion)) == Node::NodeStates::Success  )
+	{
+		return nodeState = Node::NodeStates::Failure;
+	}
 }
