@@ -14,12 +14,18 @@ PanicBranch::~PanicBranch()
 Node::NodeStates PanicBranch::update(Companion* companion)
 {
 	std::cout << "panic update" << std::endl;  // for testing
-	if (inverter.invertState(hooded.checkForHood(companion)) == Node::NodeStates::Failure)
+
+	if (companion->isHooded == true && companion->getHealth() > 99)
 	{
 		return nodeState = Node::NodeStates::Success;
 	}
-	if (inverter.invertState(hooded.checkForHood(companion)) == Node::NodeStates::Success  )
+	else if (companion->isHooded == false  && companion->getHealth() < 1)
 	{
 		return nodeState = Node::NodeStates::Failure;
 	}
+	else if (companion->isHooded == true)
+	{
+		return nodeState = Node::NodeStates::Running;
+	}
+
 }

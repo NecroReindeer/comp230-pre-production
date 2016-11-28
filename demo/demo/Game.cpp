@@ -124,12 +124,13 @@ void Game::run()
   //Initialise objects always present in the game from the start here
    BranchManager behviourTree(&falcon);
    falconBehaviour = behviourTree;
+   
    Mesh falconAliveMesh;
-   falconAliveMesh.addSphere(1,4,glm::vec3(1,0,1));
+   falconAliveMesh.addSphere(1, 16, glm::vec3(1,1,1));
    falconAliveMesh.createBuffers();
 
    Mesh falconDeadMesh;
-   falconDeadMesh.addSphere(1, 4, glm::vec3(0, 0, 1));
+   falconDeadMesh.addSphere(1, 16, glm::vec3(0, 0, 1));
    falconDeadMesh.createBuffers();
 
 
@@ -160,6 +161,8 @@ void Game::run()
 	  falcon.update();
 	  falconBehaviour.update();
 	  falcon.setHealth(falcon.getHealth() - 1);  // for testing branch switching
+
+
 
 	  SDL_GetRelativeMouseState(&mouseX, &mouseY);
 	  playerYaw -= mouseX * mouseSensitivity;
@@ -231,10 +234,10 @@ void Game::run()
 	  mvp = projection * view * transform;
 	  glUniformMatrix4fv(mvpLocation, 1, GL_FALSE, glm::value_ptr(mvp));
 	  
-	  if (falcon.getHealth() > 10)
+	  if (falcon.getHealth() > 50)
 		falconAliveMesh.draw();
 	  else 
-		  falconDeadMesh.draw();
+		 falconDeadMesh.draw();
 	  
 	  // Render floor
 	  transform = glm::mat4();
