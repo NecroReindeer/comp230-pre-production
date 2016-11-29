@@ -1,6 +1,7 @@
 #pragma once
 #include "CompositeNode.h"
 #include"LeafNode.h"
+
 class IdleRestingNode :
 	public CompositeNode  //TODO Change to sequence or selector
 {

@@ -119,21 +119,22 @@ void Game::run()
   SDL_SetRelativeMouseMode(SDL_TRUE);
   SDL_GetRelativeMouseState(nullptr, nullptr);
   Uint32 lastFrameTime = SDL_GetTicks();
-
+   
   Floor floor(-2, 10, "leaf.png");
-  //Initialise objects always present in the game from the start here
+
+  // Initialise objects always present in the game from the start here
    BranchManager behviourTree(&falcon);
    falconBehaviour = behviourTree;
    
    // For testing
    Mesh falconAliveMesh;
-   falconAliveMesh.addSphere(1, 16, glm::vec3(1,1,1));
+   falconAliveMesh.addSphere(1, 16, glm::vec3(1,1,1));  // switch to falcon obj
    falconAliveMesh.createBuffers();
 
+   // For testing
    Mesh falconDeadMesh;
    falconDeadMesh.addSphere(1, 16, glm::vec3(0, 0, 1));
    falconDeadMesh.createBuffers();
-
 
   // Main loop
   while (running)
@@ -159,6 +160,7 @@ void Game::run()
 	  if (keyboardState[SDL_SCANCODE_ESCAPE])
 		  running = false;
 	   
+	  // updates companion
 	  falcon.update();
 	  falconBehaviour.update();
 	  falcon.setHealth(falcon.getHealth() - 1);  // for testing branch switching
