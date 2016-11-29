@@ -15,15 +15,15 @@ Node::NodeStates PanicBranch::update(Companion* companion)
 {
 	std::cout << "panic update" << std::endl;  // for testing
 
-	if (companion->isHooded == true && companion->getHealth() > 99)
+	if (companion->isPanicing == true && companion->getHealth() > 99)
 	{
 		return nodeState = Node::NodeStates::Success;
 	}
-	else if (companion->isHooded == false  && companion->getHealth() < 1)
+	else if (companion->isPanicing == false  && companion->getHealth() < 1)
 	{
 		return nodeState = Node::NodeStates::Failure;
 	}
-	else if (companion->isHooded == true)
+	else if (companion->isPanicing == true)
 	{
 		return nodeState = Node::NodeStates::Running;
 	}

@@ -1,6 +1,6 @@
 #pragma once
+//! Abstract class for companion animals to inherit from
 class Companion
-	//! Abstract class for companion animals to inherit from
 {
 public:
 	//! Constructor
@@ -30,7 +30,8 @@ public:
 	//! sets value of health
 	virtual float setHealth(float newHealth) { return health = newHealth; }
 
-	bool isHooded = false;
+	//! bool for whether the AI is panicing or not
+	bool isPanicing = false;
 private:
 	//! int for the companions's current location
 	float x, y, z;
