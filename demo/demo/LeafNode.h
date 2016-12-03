@@ -1,6 +1,6 @@
 #pragma once
 #include "Node.h"
-
+//! Class for a leaf node.
 class LeafNode :
 	public Node
 {

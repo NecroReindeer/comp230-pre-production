@@ -120,7 +120,7 @@ void Game::run()
   SDL_GetRelativeMouseState(nullptr, nullptr);
   Uint32 lastFrameTime = SDL_GetTicks();
    
-  Floor floor(-2, 10, "leaf.png");
+  Plane floor(-2, 10, "leaf.png");
 
   // Initialise objects always present in the game from the start here
    BranchManager behviourTree(&falcon);

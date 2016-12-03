@@ -105,9 +105,6 @@
     <ClInclude Include="Vertex.h">
       <Filter>Header Files\Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="Floor.h">
-      <Filter>Header Files\Graphics</Filter>
-    </ClInclude>
     <ClInclude Include="ErrorMessage.h">
       <Filter>Header Files\Graphics</Filter>
     </ClInclude>
@@ -117,10 +114,13 @@
     <ClInclude Include="SequenceNode.h">
       <Filter>Header Files\Nodes\Abstract Nodes</Filter>
     </ClInclude>
-    <ClInclude Include="PanicBranch.h">
+    <ClInclude Include="HoodedNode.h">
       <Filter>Header Files\Nodes</Filter>
     </ClInclude>
-    <ClInclude Include="HoodedNode.h">
+    <ClInclude Include="Plane.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="InjuredBranch.h">
       <Filter>Header Files\Nodes</Filter>
     </ClInclude>
   </ItemGroup>
@@ -182,9 +182,6 @@
     <ClCompile Include="Mesh.cpp">
       <Filter>Source Files\Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="Floor.cpp">
-      <Filter>Source Files\Graphics</Filter>
-    </ClCompile>
     <ClCompile Include="ErrorMessage.cpp">
       <Filter>Source Files\Graphics</Filter>
     </ClCompile>
@@ -194,10 +191,13 @@
     <ClCompile Include="SequenceNode.cpp">
       <Filter>Source Files\Nodes\Abstract Nodes</Filter>
     </ClCompile>
-    <ClCompile Include="PanicBranch.cpp">
+    <ClCompile Include="HoodedNode.cpp">
       <Filter>Source Files\Nodes</Filter>
     </ClCompile>
-    <ClCompile Include="HoodedNode.cpp">
+    <ClCompile Include="Plane.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="InjuredBranch.cpp">
       <Filter>Source Files\Nodes</Filter>
     </ClCompile>
   </ItemGroup>

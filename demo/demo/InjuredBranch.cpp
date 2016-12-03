@@ -1,17 +1,17 @@
 #include "stdafx.h"
-#include "PanicBranch.h"
+#include "InjuredBranch.h"
 
 
-PanicBranch::PanicBranch()
+InjuredBranch::InjuredBranch()
 {
 }
 
 
-PanicBranch::~PanicBranch()
+InjuredBranch::~InjuredBranch()
 {
 }
 
-Node::NodeStates PanicBranch::update(Companion* companion)
+Node::NodeStates InjuredBranch::update(Companion* companion)
 {
 	std::cout << "panic update" << std::endl;  // for testing
 

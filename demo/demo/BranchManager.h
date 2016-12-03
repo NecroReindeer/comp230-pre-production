@@ -2,11 +2,14 @@
 #include "Companion.h"
 #include"DeadBranch.h"
 #include"IdleBranch.h"
-#include"PanicBranch.h"
-
+#include"InjuredBranch.h"
+//! Class for Branch Manager.
+/*!
+This is a class for handling the companions current branch
+TODO : replace with selector
+*/
 class BranchManager
-{ //! Class that manages the companions behaviour by managing the different branches 
-	//TODO : replace with selector
+{ 
 public:
 	//! Constructor
 	BranchManager();
@@ -18,9 +21,12 @@ public:
 	// Pointer to the node that is running
 	std::shared_ptr<CompositeNode> currentNode;
 
+	//! Instance of IdleBranch
 	IdleBranch idle;
+	//! Instance of DeadBranch
 	DeadBranch deadBranch;
-	PanicBranch panicBranch;
+	//! Instance of InjuredBranch
+	InjuredBranch injuredBranch;
 	
 
 	//! Pointer to companion animal

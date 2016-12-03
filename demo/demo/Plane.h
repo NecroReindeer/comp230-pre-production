@@ -1,16 +1,20 @@
 #pragma once
 #include"Mesh.h"
 #include"Texture.h"
-
-class Floor
+//! Class for creating planes.
+/*!
+This is a class for creating and handling planes in the game.
+It contains and mesh and a texture.
+*/
+class Plane
 {
 public:
 	//! Constructor
-	Floor();
+	Plane();
 	//! Alternate constructor
-	Floor(int floorYPosition, int initialFloorSize, const std::string& floorTexture);
+	Plane(int floorYPosition, int initialFloorSize, const std::string& floorTexture);
 	//! Destructor
-	~Floor();
+	~Plane();
 
 	//! Floor texture
 	Texture texture;
@@ -23,9 +27,9 @@ public:
 	float getFloorSize() { return floorSize; }
 
 private:
-	//! Floor Y position
+	//! Plane Y position
 	const float y = -2;
-	//! floorSize for rendering
+	//! planeSize for rendering
 	const float floorSize = 10;
 };
 
