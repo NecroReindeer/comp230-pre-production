@@ -49,6 +49,9 @@
     <Filter Include="Header Files\Nodes\Injured branch">
       <UniqueIdentifier>{797cf9c4-a17b-44c3-97a4-8471148047f8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Nodes\Attack Branch">
+      <UniqueIdentifier>{f61b466a-6fec-4908-bec4-1d35b5768689}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -135,6 +138,9 @@
     <ClInclude Include="IdleRestingNode.h">
       <Filter>Header Files\Nodes\Idle branch</Filter>
     </ClInclude>
+    <ClInclude Include="AttackBranch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -210,6 +216,9 @@
       <Filter>Source Files\Nodes\Injured Branch</Filter>
     </ClCompile>
     <ClCompile Include="InitialisationError.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AttackBranch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
