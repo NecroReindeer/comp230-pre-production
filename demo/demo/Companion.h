@@ -1,6 +1,6 @@
 #pragma once
+//! Abstract class for companion animals to inherit from
 class Companion
-	//! Abstract class for companion animals to inherit from
 {
 public:
 	//! Constructor
@@ -12,28 +12,30 @@ public:
 	virtual void update();
 
 	//! returns int of value x
-	virtual int getX() { return x; }
+	virtual float getX() { return x; }
 	//! returns int of value y
-	virtual int getY() { return y; }
+	virtual float getY() { return y; }
 	//! returns int of value z
-	virtual int getZ() { return z; }
+	virtual float getZ() { return z; }
 	//! returns int of value health
-	virtual int getHealth() { return health; }
+	virtual float getHealth() { return health; }
 
 
 	//! sets value of x
-	virtual int setX(int newX) { return x = newX; }
+	virtual float setX(float newX) { return x = newX; }
 	//! sets value of y
-	virtual int setY(int newY) { return y = newY; }
+	virtual float setY(float newY) { return y = newY; }
 	//! sets value of z
-	virtual int setZ(int newZ) { return z = newZ; }
+	virtual float setZ(float newZ) { return z = newZ; }
 	//! sets value of health
-	virtual int setHealth(int newHealth) { return health = newHealth; }
+	virtual float setHealth(float newHealth) { return health = newHealth; }
 
-	bool isHooded = false;
+	//! bool for whether the AI is panicing or not
+	bool isPanicking = false;
 private:
 	//! int for the companions's current location
-	int x, y, z;
-	int health = 100;
+	float x, y, z;
+	//! Companions health
+	float health = 100;
 };
 

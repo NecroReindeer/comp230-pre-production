@@ -22,6 +22,9 @@ Node::NodeStates DecoratorNode::invertState(Node::NodeStates currentState)
 	{
 		return Node::NodeStates::Failure;
 	}
+	else 
+		return Node::NodeStates::Failure;
+	// add error
 }
 
 bool DecoratorNode::invertBool(bool state)

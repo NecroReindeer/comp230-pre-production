@@ -16,7 +16,7 @@ Node::NodeStates LeafNode::update(Companion* companion)
 	return Node::NodeStates::Success;
 }
 
-bool LeafNode::checkHealth(int currentHealth, int healthThreshold)
+bool LeafNode::checkHealth(float currentHealth, float healthThreshold)
 {
 	if (currentHealth <= healthThreshold)
 		return true;

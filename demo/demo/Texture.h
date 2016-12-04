@@ -18,6 +18,7 @@ public:
 	//! Binds the texture which needs to be active
 	void bindTexture();
 
+	//! Texture ID
 	GLuint textureId;
 };
 

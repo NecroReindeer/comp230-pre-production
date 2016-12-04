@@ -12,7 +12,9 @@ public:
 	//! Updates the Node
 	virtual Node::NodeStates update(Companion* companion);
 
-private:
-	//std::vector<Node> childNodes;
+	//! adds a node to the childNodes vector
+	virtual void addChild(Node* node);
+	//! Vector of child nodes
+	std::vector<Node*> childNodes;
 };
 

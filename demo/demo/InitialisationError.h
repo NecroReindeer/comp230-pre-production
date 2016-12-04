@@ -1,11 +1,9 @@
+#pragma once
 //! Class for initialisation errors.
 /*!
 This is a class for handling initialisation errors.
 It inherits from the std::exception class.
 */
-
-#pragma once
-
 class InitialisationError : std::exception
 {
 public:

@@ -119,9 +119,23 @@ void Game::run()
   SDL_SetRelativeMouseMode(SDL_TRUE);
   SDL_GetRelativeMouseState(nullptr, nullptr);
   Uint32 lastFrameTime = SDL_GetTicks();
+   
+  Plane floor(-2, 10, "leaf.png");
 
-  Floor floor(-2, 10, "leaf.png");
- 
+  // Initialise objects always present in the game from the start here
+   BranchManager behviourTree(&falcon);
+   falconBehaviour = behviourTree;
+   
+   // For testing
+   Mesh falconAliveMesh;
+   falconAliveMesh.addSphere(1, 16, glm::vec3(1,1,1));  // switch to falcon obj
+   falconAliveMesh.createBuffers();
+
+   // For testing
+   Mesh falconDeadMesh;
+   falconDeadMesh.addSphere(1, 16, glm::vec3(0, 0, 1));
+   falconDeadMesh.createBuffers();
+
   // Main loop
   while (running)
   {
@@ -145,7 +159,11 @@ void Game::run()
 	  const Uint8* keyboardState = SDL_GetKeyboardState(nullptr);
 	  if (keyboardState[SDL_SCANCODE_ESCAPE])
 		  running = false;
-	  
+	   
+	  // updates companion
+	  falcon.update();
+	  falconBehaviour.update();
+	  falcon.setHealth(falcon.getHealth() - 1);  // for testing branch switching
 
 	  SDL_GetRelativeMouseState(&mouseX, &mouseY);
 	  playerYaw -= mouseX * mouseSensitivity;
@@ -164,7 +182,7 @@ void Game::run()
 
 	  glm::vec4 playerForward = playerLook;
 
-
+	  // TODO: Change to use PlayerInput class
 	  if (keyboardState[SDL_SCANCODE_W])
 	  {
 		  playerPosition += playerForward * movementMultipler;
@@ -210,6 +228,17 @@ void Game::run()
 	  glUniform3f(cameraSpaceLocation, playerPosition.x, playerPosition.y, playerPosition.z);
 
 	  glm::mat4 mvp;
+	  glm::vec3 falconPos(falcon.getX(), falcon.getY(), falcon.getZ());
+	  //falcon.setY(falcon.getY() + 1);
+	  transform = glm::mat4();
+	  transform = glm::translate(transform, falconPos);
+	  mvp = projection * view * transform;
+	  glUniformMatrix4fv(mvpLocation, 1, GL_FALSE, glm::value_ptr(mvp));
+	  
+	  if (falcon.getHealth() > 50)
+		falconAliveMesh.draw();
+	  else 
+		 falconDeadMesh.draw();
 	  
 	  // Render floor
 	  transform = glm::mat4();

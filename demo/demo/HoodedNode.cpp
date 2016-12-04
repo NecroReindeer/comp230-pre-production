@@ -13,8 +13,8 @@ HoodedNode::~HoodedNode()
 
 Node::NodeStates HoodedNode::checkForHood(Companion* companion)
 {
-	if (companion->isHooded)
+	if (companion->isPanicking)
 		return Node::NodeStates::Success;
-	else if (!companion->isHooded)
+	else if (!companion->isPanicking)
 		return Node::NodeStates::Failure;
 }
