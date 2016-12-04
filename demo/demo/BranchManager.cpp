@@ -28,6 +28,12 @@ void BranchManager::changeBranch()
 		currentNode = std::make_shared<InjuredBranch>();
 		std::cout << "changed branch " << std::endl;  // for testing
 	}
+	else if (companion->enemyNear == true)
+	{
+		currentNode = std::make_shared<AttackBranch>();
+		std::cout << "changed branch " << std::endl;  // for testing
+	}
+	
 }
 
 void BranchManager::update()
@@ -42,9 +48,4 @@ void BranchManager::update()
 	{
 		changeBranch();
 	}
-}
-
-int BranchManager::getCompanionHealth()
-{
-	return companion->getHealth();
 }

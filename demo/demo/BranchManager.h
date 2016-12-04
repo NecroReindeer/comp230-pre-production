@@ -3,6 +3,7 @@
 #include"DeadBranch.h"
 #include"IdleBranch.h"
 #include"InjuredBranch.h"
+#include"AttackBranch.h"
 //! Class for Branch Manager.
 /*!
 This is a class for handling the companions current branch
@@ -27,6 +28,8 @@ public:
 	DeadBranch deadBranch;
 	//! Instance of InjuredBranch
 	InjuredBranch injuredBranch;
+	//! Instance of AttackBranch
+	AttackBranch attackBranch;
 	
 
 	//! Pointer to companion animal
@@ -36,12 +39,6 @@ public:
 	void changeBranch();
 
 	//! Updates the current branch
-	void update();
-	//! returns the companions current health
-	int getCompanionHealth();
-
-	//! Checks the current health against a given number and returns a bool
-	bool checkHealth(int healthThreshold);
-	
+	void update();	
 };
 
