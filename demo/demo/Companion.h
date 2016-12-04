@@ -30,8 +30,12 @@ public:
 	//! sets value of health
 	virtual float setHealth(float newHealth) { return health = newHealth; }
 
-	//! bool for whether the AI is panicing or not
+	//! bool for whether the AI is panicking or not
 	bool isPanicking = false;
+	//! bool for whether an enemy is near the companion
+	bool enemyNear = false;
+	//! int for minimum health for attacking
+	int attackHealthThreshold = 50;
 private:
 	//! int for the companions's current location
 	float x, y, z;

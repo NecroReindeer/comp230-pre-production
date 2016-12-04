@@ -157,6 +157,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AttackBranch.h" />
     <ClInclude Include="Companion.h" />
     <ClInclude Include="BranchManager.h" />
     <ClInclude Include="CompositeNode.h" />
@@ -186,6 +187,7 @@
     <ClInclude Include="Vertex.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AttackBranch.cpp" />
     <ClCompile Include="Companion.cpp" />
     <ClCompile Include="BranchManager.cpp" />
     <ClCompile Include="CompositeNode.cpp" />

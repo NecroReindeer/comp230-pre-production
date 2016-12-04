@@ -149,9 +149,6 @@ void Game::run()
 			  running = false;
 			  break;
 
-		  case SDLK_ESCAPE:
-			  running = false;
-			  break;
 		  default:
 			  break;
 		  }
@@ -159,6 +156,11 @@ void Game::run()
 	  const Uint8* keyboardState = SDL_GetKeyboardState(nullptr);
 	  if (keyboardState[SDL_SCANCODE_ESCAPE])
 		  running = false;
+
+	  if (keyboardState[SDL_SCANCODE_E])
+		  falcon.enemyNear = true;
+
+
 	   
 	  // updates companion
 	  falcon.update();

@@ -30,3 +30,8 @@ bool LeafNode::checkForCommand(Companion* companion)
 	//return companion.commandPresent;
 	return false;
 }
+
+bool LeafNode::checkForEnemy(Companion* companion)
+{
+	return companion->enemyNear;
+}

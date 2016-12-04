@@ -25,6 +25,10 @@ Node::NodeStates IdleRestingNode::update(Companion* companion)
 	{
 		nodeState = Node::NodeStates::Success;
 	}
+	else if (resting.checkForEnemy(companion))
+	{
+		nodeState = Node::NodeStates::Success;
+	}
 
 	else 
 	{
