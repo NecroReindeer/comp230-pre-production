@@ -31,7 +31,7 @@ public:
 	virtual float setHealth(float newHealth) { return health = newHealth; }
 
 	//! bool for whether the AI is panicing or not
-	bool isPanicing = false;
+	bool isPanicking = false;
 private:
 	//! int for the companions's current location
 	float x, y, z;
