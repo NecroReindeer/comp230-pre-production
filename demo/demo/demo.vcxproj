@@ -165,12 +165,12 @@
     <ClInclude Include="demo.h" />
     <ClInclude Include="ErrorMessage.h" />
     <ClInclude Include="Falcon.h" />
+    <ClInclude Include="InitialisationError.h" />
     <ClInclude Include="Plane.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="HoodedNode.h" />
     <ClInclude Include="IdleBranch.h" />
     <ClInclude Include="IdleRestingNode.h" />
-    <ClInclude Include="InitialisationError.h" />
     <ClInclude Include="LeafNode.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Node.h" />
@@ -194,12 +194,12 @@
     <ClCompile Include="demo.cpp" />
     <ClCompile Include="ErrorMessage.cpp" />
     <ClCompile Include="Falcon.cpp" />
+    <ClCompile Include="InitialisationError.cpp" />
     <ClCompile Include="Plane.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="HoodedNode.cpp" />
     <ClCompile Include="IdleBranch.cpp" />
     <ClCompile Include="IdleRestingNode.cpp" />
-    <ClCompile Include="InitialisationError.cpp" />
     <ClCompile Include="LeafNode.cpp" />
     <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="Node.cpp" />

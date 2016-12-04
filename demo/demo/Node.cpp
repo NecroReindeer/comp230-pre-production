@@ -10,3 +10,9 @@ Node::~Node()
 {
 }
 
+
+Node::NodeStates Node::update()
+{
+	std::cout << "called node update " << std::endl;
+	return Node::NodeStates::Running;
+}
