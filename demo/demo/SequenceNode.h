@@ -12,5 +12,7 @@ public:
 	SequenceNode();
 	//! Destructor
 	~SequenceNode();
+
+	Node::NodeStates update(Companion* companion);
 };
 

@@ -15,6 +15,6 @@ public:
 	//! adds a node to the childNodes vector
 	virtual void addChild(Node* node);
 	//! Vector of child nodes
-	std::vector<Node> childNodes;
+	std::vector<Node*> childNodes;
 };
 
