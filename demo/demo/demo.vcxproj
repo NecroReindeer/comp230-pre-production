@@ -167,6 +167,7 @@
     <ClInclude Include="ErrorMessage.h" />
     <ClInclude Include="Falcon.h" />
     <ClInclude Include="InitialisationError.h" />
+    <ClInclude Include="perlinNoise.h" />
     <ClInclude Include="Plane.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="HoodedNode.h" />
@@ -197,6 +198,7 @@
     <ClCompile Include="ErrorMessage.cpp" />
     <ClCompile Include="Falcon.cpp" />
     <ClCompile Include="InitialisationError.cpp" />
+    <ClCompile Include="perlinNoise.cpp" />
     <ClCompile Include="Plane.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="HoodedNode.cpp" />

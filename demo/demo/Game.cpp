@@ -90,6 +90,24 @@ void Game::initialiseGlew()
   }
 }
 
+/*A new terrain is made by going through a grid and assigning values based on what is randomly generated through perlin noise. It assigns the squares
+different Y values*/
+Mesh* terrain()
+{
+	Mesh* myTerrain = new Mesh;
+	perlinNoise pn;
+	for (int x = 0; x < 30; x++)
+	{
+		for (int z = 0; z < 30; z++) //creating a grid
+		{
+			double land = pn.noise(x / 5.0, z / 5.0, 0) * 5; //perlin result equals the x,y coordinate
+			myTerrain->addSquare(glm::vec3(x, land, z), glm::vec3(x + 1, land, z), glm::vec3(x + 1, land, z + 1), glm::vec3(x, land, z + 1), glm::vec3(0, 1, 0), 0, 0, 0, 0);
+		}
+	}
+
+	myTerrain->createBuffers();
+	return myTerrain;
+}
 
 void Game::run()
 {
@@ -112,7 +130,7 @@ void Game::run()
   glEnable(GL_BLEND);
   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-  glEnable(GL_CULL_FACE);
+  //glEnable(GL_CULL_FACE);
 
   glm::vec4 playerPosition(0, 0, 5, 1);
 
@@ -128,7 +146,7 @@ void Game::run()
    
    // For testing
    Mesh falconAliveMesh;
-   falconAliveMesh.addSphere(1, 16, glm::vec3(1,1,1));  // switch to falcon obj
+   falconAliveMesh.addSphere(1, 16, glm::vec3(1,0,0)); 
    falconAliveMesh.createBuffers();
 
    // For testing
@@ -136,121 +154,123 @@ void Game::run()
    falconDeadMesh.addSphere(1, 16, glm::vec3(0, 0, 1));
    falconDeadMesh.createBuffers();
 
+   Mesh* landMass = terrain();
+
   // Main loop
-  while (running)
-  {
-	  SDL_Event ev;
-	  if (SDL_PollEvent(&ev))
-	  {
-		  switch (ev.type)
-		  {
-			  // Close the game when user quits
-		  case SDL_QUIT:
-			  running = false;
-			  break;
+   while (running)
+   {
+	   SDL_Event ev;
+	   if (SDL_PollEvent(&ev))
+	   {
+		   switch (ev.type)
+		   {
+			   // Close the game when user quits
+		   case SDL_QUIT:
+			   running = false;
+			   break;
 
-		  default:
-			  break;
-		  }
-	  }
-	  const Uint8* keyboardState = SDL_GetKeyboardState(nullptr);
-	  if (keyboardState[SDL_SCANCODE_ESCAPE])
-		  running = false;
+		   default:
+			   break;
+		   }
+	   }
+	   const Uint8* keyboardState = SDL_GetKeyboardState(nullptr);
+	   if (keyboardState[SDL_SCANCODE_ESCAPE])
+		   running = false;
 
-	  if (keyboardState[SDL_SCANCODE_E])
-		  falcon.enemyNear = true;
+	   if (keyboardState[SDL_SCANCODE_E])
+		   falcon.enemyNear = true;
 
 
-	   
-	  // updates companion
-	  falcon.update();
-	  falconBehaviour.update();
-	  falcon.setHealth(falcon.getHealth() - 1);  // for testing branch switching
 
-	  SDL_GetRelativeMouseState(&mouseX, &mouseY);
-	  playerYaw -= mouseX * mouseSensitivity;
-	  playerPitch -= mouseY * mouseSensitivity;
-	  const float maxPitch = glm::radians(89.0f);
-	  if (playerPitch > maxPitch)
-		  playerPitch = maxPitch;
-	  if (playerPitch < -maxPitch)
-		  playerPitch = -maxPitch;
+	   // updates companion
+	   falcon.update();
+	   falconBehaviour.update();
+	   falcon.setHealth(falcon.getHealth() - 1);  // for testing branch switching
 
-	  glm::vec4 playerLook(0, 0, -1, 0);
-	  glm::mat4 playerRotation;
-	  playerRotation = glm::rotate(playerRotation, playerYaw, glm::vec3(0, 1, 0));
-	  playerRotation = glm::rotate(playerRotation, playerPitch, glm::vec3(1, 0, 0));
-	  playerLook = playerRotation * playerLook;
+	   SDL_GetRelativeMouseState(&mouseX, &mouseY);
+	   playerYaw -= mouseX * mouseSensitivity;
+	   playerPitch -= mouseY * mouseSensitivity;
+	   const float maxPitch = glm::radians(89.0f);
+	   if (playerPitch > maxPitch)
+		   playerPitch = maxPitch;
+	   if (playerPitch < -maxPitch)
+		   playerPitch = -maxPitch;
 
-	  glm::vec4 playerForward = playerLook;
+	   glm::vec4 playerLook(0, 0, -1, 0);
+	   glm::mat4 playerRotation;
+	   playerRotation = glm::rotate(playerRotation, playerYaw, glm::vec3(0, 1, 0));
+	   playerRotation = glm::rotate(playerRotation, playerPitch, glm::vec3(1, 0, 0));
+	   playerLook = playerRotation * playerLook;
 
-	  // TODO: Change to use PlayerInput class
-	  if (keyboardState[SDL_SCANCODE_W])
-	  {
-		  playerPosition += playerForward * movementMultipler;
-		  playerPosition.y = 0;
-	  }
-	  if (keyboardState[SDL_SCANCODE_S])
-	  {
-		  playerPosition -= playerForward * movementMultipler;
-		  playerPosition.y = 0;
-	  }
+	   glm::vec4 playerForward = playerLook;
 
-	  glm::vec4 playerRight(0, 0, -1, 0);
-	  glm::mat4 playerRightRotation;
-	  playerRightRotation = glm::rotate(playerRightRotation, playerYaw - glm::radians(90.0f), glm::vec3(0, 1, 0));
-	  playerRight = playerRightRotation * playerRight;
+	   // TODO: Change to use PlayerInput class
+	   if (keyboardState[SDL_SCANCODE_W])
+	   {
+		   playerPosition += playerForward * movementMultipler;
+		   playerPosition.y = 0;
+	   }
+	   if (keyboardState[SDL_SCANCODE_S])
+	   {
+		   playerPosition -= playerForward * movementMultipler;
+		   playerPosition.y = 0;
+	   }
 
-	  if (keyboardState[SDL_SCANCODE_A])
-	  {
-		  playerPosition -= playerRight * movementMultipler;
-		  playerPosition.y = 0;
-	  }
-	  if (keyboardState[SDL_SCANCODE_D])
-	  {
-		  playerPosition += playerRight * movementMultipler;
-		  playerPosition.y = 0;
-	  }
+	   glm::vec4 playerRight(0, 0, -1, 0);
+	   glm::mat4 playerRightRotation;
+	   playerRightRotation = glm::rotate(playerRightRotation, playerYaw - glm::radians(90.0f), glm::vec3(0, 1, 0));
+	   playerRight = playerRightRotation * playerRight;
 
-	  // Calculate delta time
-	  Uint32 currentTime = SDL_GetTicks();
-	  float deltaTime = (currentTime - lastFrameTime) / 1000.0f;
-	  lastFrameTime = currentTime;
+	   if (keyboardState[SDL_SCANCODE_A])
+	   {
+		   playerPosition -= playerRight * movementMultipler;
+		   playerPosition.y = 0;
+	   }
+	   if (keyboardState[SDL_SCANCODE_D])
+	   {
+		   playerPosition += playerRight * movementMultipler;
+		   playerPosition.y = 0;
+	   }
 
-	  glClearColor(0.9f, 0.9f, 0.9f, 1.0f);
-	  glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	   // Calculate delta time
+	   Uint32 currentTime = SDL_GetTicks();
+	   float deltaTime = (currentTime - lastFrameTime) / 1000.0f;
+	   lastFrameTime = currentTime;
 
-	  glUseProgram(programID);
+	   glClearColor(0.9f, 0.9f, 0.9f, 1.0f);
+	   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	  glm::mat4 view = glm::lookAt(glm::vec3(playerPosition), glm::vec3(playerPosition + playerLook), glm::vec3(0, 1, 0));
-	  glm::mat4 projection = glm::perspective(glm::radians(45.0f), 1.0f, 0.1f, 100.0f);
+	   glUseProgram(programID);
 
-	  glm::mat4 transform;
-	  glUniform3f(lightDirectionLocation, 1, 1, 1);
-	  glUniform3f(cameraSpaceLocation, playerPosition.x, playerPosition.y, playerPosition.z);
+	   glm::mat4 view = glm::lookAt(glm::vec3(playerPosition), glm::vec3(playerPosition + playerLook), glm::vec3(0, 1, 0));
+	   glm::mat4 projection = glm::perspective(glm::radians(45.0f), 1.0f, 0.1f, 100.0f);
 
-	  glm::mat4 mvp;
-	  glm::vec3 falconPos(falcon.getX(), falcon.getY(), falcon.getZ());
-	  //falcon.setY(falcon.getY() + 1);
-	  transform = glm::mat4();
-	  transform = glm::translate(transform, falconPos);
-	  mvp = projection * view * transform;
-	  glUniformMatrix4fv(mvpLocation, 1, GL_FALSE, glm::value_ptr(mvp));
-	  
-	  if (falcon.getHealth() > 50)
-		falconAliveMesh.draw();
-	  else 
-		 falconDeadMesh.draw();
-	  
-	  // Render floor
-	  transform = glm::mat4();
-	  mvp = projection * view * transform;
-	  glUniformMatrix4fv(mvpLocation, 1, GL_FALSE, glm::value_ptr(mvp));
-	  floor.texture.bindTexture();
-	  floor.mesh.draw();
-	  
+	   glm::mat4 transform;
+	   glUniform3f(lightDirectionLocation, 1, 1, 1);
+	   glUniform3f(cameraSpaceLocation, playerPosition.x, playerPosition.y, playerPosition.z);
 
-	  SDL_GL_SwapWindow(window);
-  
-  }
+	   glm::mat4 mvp;
+	   glm::vec3 falconPos(falcon.getX(), falcon.getY(), falcon.getZ());
+	   transform = glm::mat4();
+	   transform = glm::translate(transform, falconPos);
+	   mvp = projection * view * transform;
+	   glUniformMatrix4fv(mvpLocation, 1, GL_FALSE, glm::value_ptr(mvp));
+
+	   if (falcon.getHealth() > 50)
+		   falconAliveMesh.draw();
+	   else
+		   falconDeadMesh.draw();
+
+	   // Render floor
+	   transform = glm::mat4();
+	   transform = glm::translate(transform, glm::vec3(-6, -6, -6));
+	   mvp = projection * view * transform;
+	   glUniformMatrix4fv(mvpLocation, 1, GL_FALSE, glm::value_ptr(mvp));
+	   landMass->draw(); //draws the terrain
+
+
+
+	   SDL_GL_SwapWindow(window);
+
+   }
 }

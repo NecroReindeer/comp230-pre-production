@@ -1,14 +1,11 @@
 #pragma once
 #include "Falcon.h"
 #include"BranchManager.h"
-#pragma once
-#include "Falcon.h"
-#include"BranchManager.h"
-#pragma once 
 #include"PlayerInput.h"
 #include"Shader.h"
 #include"Plane.h"
 #include"Mesh.h"
+#include"perlinNoise.h"
 
 //! Main class that runs the game
 class Game

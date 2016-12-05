@@ -16,8 +16,16 @@ public:
 	void addTriangle(Vertex v1, Vertex v2, Vertex v3);
 	//! Creates a triangle with a colour
 	void addTriangle(Vertex v1, Vertex v2, Vertex v3, const glm::vec3& colour);
+	//! adds triangle using glm::vec3 instead of vertex
+	void addTriangle(const glm::vec3& p1, const glm::vec3& p2, const glm::vec3& p3,
+		const glm::vec3& colour,
+		const glm::vec2& t1, const glm::vec2& t2, const glm::vec2& t3);
 	//! Creates a square
 	void addSquare(Vertex v1, Vertex v2, Vertex v3, Vertex v4, const glm::vec3& colour);
+	//! Creates a square using glm::vec3
+	void addSquare(const glm::vec3& a, const glm::vec3& b,
+		const glm::vec3& c, const glm::vec3& d, const glm::vec3& colour,
+		float u1, float u2, float v1, float v2);
 	//! Creates a sphere
 	void addSphere(float radius, int quality, const glm::vec3& colour);
 	//! Creates a vertex

@@ -145,7 +145,6 @@ void Mesh::createBuffers()
 	glBindBuffer(GL_ARRAY_BUFFER, m_positionBuffer);
 	glBufferData(GL_ARRAY_BUFFER, m_vertexPositions.size() * sizeof(glm::vec3), m_vertexPositions.data(), GL_STATIC_DRAW);
 
-
 	// Create and fill the colour buffer
 	glGenBuffers(1, &m_colourBuffer);
 	glBindBuffer(GL_ARRAY_BUFFER, m_colourBuffer);
@@ -195,4 +194,43 @@ void Mesh::draw()
 	glDisableVertexAttribArray(1);
 	glDisableVertexAttribArray(2);
 	glDisableVertexAttribArray(3);
+}
+
+
+
+void Mesh::addTriangle(const glm::vec3& p1, const glm::vec3& p2, const glm::vec3& p3,
+	const glm::vec3& colour,
+	const glm::vec2& t1, const glm::vec2& t2, const glm::vec2& t3)
+{
+	if (m_positionBuffer != 0)
+	{
+		throw std::exception("Cannot add triangles after createBuffers() has been called");
+	}
+
+	// Add the vertex positions
+	m_vertexPositions.push_back(p1);
+	m_vertexPositions.push_back(p2);
+	m_vertexPositions.push_back(p3);
+
+	// Make all three vertices the same colour
+	for (int i = 0; i < 3; i++)
+		m_vertexColours.push_back(colour);
+
+	// Add the texture coordinates
+	m_vertexUVs.push_back(t1);
+	m_vertexUVs.push_back(t2);
+	m_vertexUVs.push_back(t3);
+}
+
+void Mesh::addSquare(const glm::vec3& a, const glm::vec3& b,
+	const glm::vec3& c, const glm::vec3& d, const glm::vec3& colour,
+	float u1, float u2, float v1, float v2)
+{
+	glm::vec2 ta(u1, v1);
+	glm::vec2 tb(u1, v2);
+	glm::vec2 tc(u2, v2);
+	glm::vec2 td(u2, v1);
+
+	addTriangle(a, b, d, colour, ta, tb, td);
+	addTriangle(d, b, c, colour, td, tb, tc);
 }
