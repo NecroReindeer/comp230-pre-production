@@ -77,7 +77,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>..\..\Libraries\SDL2-2.0.4\include;..\..\Libraries\glew-1.13.0\include;..\..\Libraries\glm;..\..\Libraries\gli;..\..\Libraries\SDL2_image-2.0.1\include;$(IncludePath)</IncludePath>
-    <LibraryPath>..\..\Libraries\SDL2-2.0.4\lib\x64;..\..\Libraries\glew-1.13.0\lib\Release\x64;Libraries\SDL2_image-2.0.1\lib\x64;$(LibraryPath)</LibraryPath>
+    <LibraryPath>..\..\Libraries\SDL2-2.0.4\lib\x64;..\..\Libraries\glew-1.13.0\lib\Release\x64;..\..\Libraries\SDL2_image-2.0.1\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
