@@ -19,16 +19,39 @@
 
 
 // TODO: reference additional headers your program requires here
+
+// C++ runtime header files
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <sstream>
+#include <algorithm>
 #include <memory>
 #include <time.h>
+
+// SDL
 #include <SDL.h>
-#include <gl\glew.h>
+#include <SDL_image.h>
+
+// OpenGL
+#include <GL/glew.h>
+#include <gl/GL.h>
+#include <gl/glu.h>
 #include <SDL_opengl.h>
-#include <gl\glu.h>
-#include <stdio.h>
-#include <string>
-#include <fstream>
-#include <vector>
+// GLM
 #include <glm.hpp>
 #include <gtx\transform.hpp>
-#include <gtc\matrix_transform.hpp>
+#include <vec3.hpp>
+#include <vec4.hpp>
+#include <mat4x4.hpp>
+#include <gtc/matrix_transform.hpp>
+#include <gtc/type_ptr.hpp>
+#include <glm.hpp>
+#include <gtx/norm.hpp>
+
+
+
+
+
+
