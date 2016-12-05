@@ -29,6 +29,12 @@ public:
   PlayerInput inputHandler;
   //! Loads and compliles the shaders
   Shader shaders;
+  //! Generates terrain and returns it as a mesh
+  /*!
+  A new terrain is made by going through a grid and assigning values based on what is randomly generated through perlin noise. It assigns the squares
+  different Y values
+  */
+  Mesh* terrain();
 
 private:
    //! Constructor

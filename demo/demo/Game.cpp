@@ -90,9 +90,8 @@ void Game::initialiseGlew()
   }
 }
 
-/*A new terrain is made by going through a grid and assigning values based on what is randomly generated through perlin noise. It assigns the squares
-different Y values*/
-Mesh* terrain()
+
+Mesh* Game::terrain()
 {
 	Mesh* myTerrain = new Mesh;
 	perlinNoise pn;
@@ -130,15 +129,14 @@ void Game::run()
   glEnable(GL_BLEND);
   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-  //glEnable(GL_CULL_FACE);
-
+  // Camera start position 
   glm::vec4 playerPosition(0, 0, 5, 1);
 
   SDL_SetRelativeMouseMode(SDL_TRUE);
   SDL_GetRelativeMouseState(nullptr, nullptr);
   Uint32 lastFrameTime = SDL_GetTicks();
-   
-  Plane floor(-2, 10, "leaf.png");
+  //! loads texture
+  Texture texture("terrain.png");
 
   // Initialise objects always present in the game from the start here
    BranchManager behviourTree(&falcon);
@@ -151,9 +149,10 @@ void Game::run()
 
    // For testing
    Mesh falconDeadMesh;
-   falconDeadMesh.addSphere(1, 16, glm::vec3(0, 0, 1));
+   falconDeadMesh.addSphere(1, 16, glm::vec3(1, 1, 1));
    falconDeadMesh.createBuffers();
 
+   // Generates terrain
    Mesh* landMass = terrain();
 
   // Main loop
@@ -198,13 +197,12 @@ void Game::run()
 
 	   glm::vec4 playerLook(0, 0, -1, 0);
 	   glm::mat4 playerRotation;
-	   playerRotation = glm::rotate(playerRotation, playerYaw, glm::vec3(0, 1, 0));
+	   playerRotation = glm::rotate(playerRotation, playerYaw, glm::vec3(1, 1, 1));
 	   playerRotation = glm::rotate(playerRotation, playerPitch, glm::vec3(1, 0, 0));
 	   playerLook = playerRotation * playerLook;
 
 	   glm::vec4 playerForward = playerLook;
 
-	   // TODO: Change to use PlayerInput class
 	   if (keyboardState[SDL_SCANCODE_W])
 	   {
 		   playerPosition += playerForward * movementMultipler;
