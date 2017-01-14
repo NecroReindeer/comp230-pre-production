@@ -37,21 +37,6 @@
     <Filter Include="Source Files\Graphics">
       <UniqueIdentifier>{5caa7cac-7976-49fa-b3c3-25442abc7b9e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Nodes\Idle Branch">
-      <UniqueIdentifier>{ee36caba-8eb5-4c27-8a79-8abedd39f980}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Nodes\Injured Branch">
-      <UniqueIdentifier>{9729bdbb-4d43-4e96-b970-20c047b1ba0b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Nodes\Idle branch">
-      <UniqueIdentifier>{0a0fef8d-e19b-4d33-b442-75b36ac74f05}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Nodes\Injured branch">
-      <UniqueIdentifier>{797cf9c4-a17b-44c3-97a4-8471148047f8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Nodes\Attack Branch">
-      <UniqueIdentifier>{f61b466a-6fec-4908-bec4-1d35b5768689}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -86,9 +71,6 @@
     </ClInclude>
     <ClInclude Include="BranchManager.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DeadBranch.h">
-      <Filter>Header Files\Nodes</Filter>
     </ClInclude>
     <ClInclude Include="PlayerInput.h">
       <Filter>Header Files</Filter>
@@ -126,21 +108,6 @@
     <ClInclude Include="InitialisationError.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HoodedNode.h">
-      <Filter>Header Files\Nodes\Injured branch</Filter>
-    </ClInclude>
-    <ClInclude Include="InjuredBranch.h">
-      <Filter>Header Files\Nodes\Injured branch</Filter>
-    </ClInclude>
-    <ClInclude Include="IdleBranch.h">
-      <Filter>Header Files\Nodes\Idle branch</Filter>
-    </ClInclude>
-    <ClInclude Include="IdleRestingNode.h">
-      <Filter>Header Files\Nodes\Idle branch</Filter>
-    </ClInclude>
-    <ClInclude Include="AttackBranch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -154,9 +121,6 @@
     </ClCompile>
     <ClCompile Include="BranchManager.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DeadBranch.cpp">
-      <Filter>Source Files\Nodes</Filter>
     </ClCompile>
     <ClCompile Include="PlayerInput.cpp">
       <Filter>Source Files</Filter>
@@ -203,22 +167,7 @@
     <ClCompile Include="Plane.cpp">
       <Filter>Source Files\Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="IdleBranch.cpp">
-      <Filter>Source Files\Nodes\Idle Branch</Filter>
-    </ClCompile>
-    <ClCompile Include="IdleRestingNode.cpp">
-      <Filter>Source Files\Nodes\Idle Branch</Filter>
-    </ClCompile>
-    <ClCompile Include="HoodedNode.cpp">
-      <Filter>Source Files\Nodes\Injured Branch</Filter>
-    </ClCompile>
-    <ClCompile Include="InjuredBranch.cpp">
-      <Filter>Source Files\Nodes\Injured Branch</Filter>
-    </ClCompile>
     <ClCompile Include="InitialisationError.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AttackBranch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
