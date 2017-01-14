@@ -24,10 +24,10 @@ bool LeafNode::checkHealth(float currentHealth, float healthThreshold)
 		return false;
 }
 
-bool LeafNode::checkForCommand(Companion* companion)
+bool LeafNode::checkForInput(Companion* companion)
 {
 	// TODO: add command bool to Companion
-	//return companion.commandPresent;
+	//return companion.inputPresent;
 	return false;
 }
 

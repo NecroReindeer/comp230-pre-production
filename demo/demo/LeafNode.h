@@ -16,7 +16,7 @@ public:
 	//! checks whether the health is above a certain value
 	bool checkHealth(float currentHealth, float healthThreshold);
 	//! checks for player input
-	bool checkForCommand(Companion* companion);
+	bool checkForInput(Companion* companion);
 	//! returns bool that indicates whether there's an enemy near the falcon
 	bool checkForEnemy(Companion* companion);
 };
