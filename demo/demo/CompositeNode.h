@@ -14,6 +14,8 @@ public:
 
 	//! adds a node to the childNodes vector
 	virtual void addChild(Node* node);
+	//! Checks to see if childNodes is empty
+	virtual bool nodeHasChild();
 	//! Vector of child nodes
 	std::vector<Node*> childNodes;
 };
